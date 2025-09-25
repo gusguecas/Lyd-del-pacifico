@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LYD - Distribuidor Oficial Husqvarna | Equipos para Jardín</title>
+    <meta name="description" content="Venta de equipos Husqvarna para jardín: sopladoras, fumigadoras y podadoras. Potencia y precisión para tu jardín. Disponible también en Coppel.com">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Complete CSS Embedded */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: #253967;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .lyd-official-logo {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-list a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 0;
+            transition: color 0.3s ease;
+        }
+
+        .nav-list a:hover {
+            color: #ff6600;
+        }
+
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            padding: 15px 0;
+            min-width: 250px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            display: block;
+        }
+
+        .dropdown-menu a {
+            color: #333;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .dropdown-menu a:hover {
+            background: #f8f9fa;
+            color: #ff6600;
+        }
+
+        .header-contact {
+            display: flex;
+            gap: 15px;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background: #22c55e;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #253967 0%, #1e2c5a 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            background: #ff6600;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #e55a00;
+            transform: translateY(-2px);
+        }
+
+        /* Products Section */
+        .products {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+
+        .products h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #253967;
+            margin-bottom: 3rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border-left: 5px solid #ff6600;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #253967, #ff6600);
+        }
+
+        .card-content {
+            padding: 2rem;
+        }
+
+        .card-content h3 {
+            color: #253967;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .card-content p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .card-features {
+            margin-bottom: 1.5rem;
+        }
+
+        .card-features li {
+            color: #555;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-features i {
+            color: #ff6600;
+        }
+
+        .card-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #253967;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            flex: 1;
+            text-align: center;
+            min-width: 140px;
+        }
+
+        .btn-primary:hover {
+            background: #1e2c5a;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            flex: 1;
+            text-align: center;
+            min-width: 140px;
+        }
+
+        .btn-whatsapp:hover {
+            background: #22c55e;
+        }
+
+        /* About Section */
+        .about {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            color: #253967;
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .about-text p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .about-features {
+            list-style: none;
+        }
+
+        .about-features li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .about-features i {
+            color: #ff6600;
+            font-size: 1.2rem;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #253967;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #ff6600;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-item i {
+            color: #ff6600;
+            font-size: 1.1rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: #ff6600;
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: #e55a00;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .card-buttons {
+                flex-direction: column;
+            }
+            
+            .nav-list {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo a la izquierda -->
+                <div class="logo">
+                    <img src="https://i.ibb.co/p60cXvdb/Captura-de-pantalla-2025-09-16-a-la-s-6-41-38-p-m.png" alt="LYD - Logística y Distribución Nacional" class="lyd-official-logo">
+                </div>
+                
+                <!-- Navegación central -->
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                        <li class="nav-dropdown">
+                            <a href="#productos" class="dropdown-toggle">
+                                Productos <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="motocultivadores.html"><i class="fas fa-seedling"></i> Motocultivadores</a></li>
+                                <li><a href="motosierras.html"><i class="fas fa-cut"></i> Motosierras y Recortadoras</a></li>
+                                <li><a href="podadoras.html"><i class="fas fa-leaf"></i> Podadoras</a></li>
+                                <li><a href="#sopladoras"><i class="fas fa-wind"></i> Sopladoras y Desbrozadoras</a></li>
+                                <li><a href="#fumigadoras"><i class="fas fa-spray-can"></i> Fumigadoras</a></li>
+                                <li><a href="#generadores"><i class="fas fa-bolt"></i> Bombas y Generadores</a></li>
+                                <li><a href="#equipos"><i class="fas fa-hard-hat"></i> Equipos y Consumibles</a></li>
+                                <li><a href="#repuestos"><i class="fas fa-tools"></i> Piezas y Accesorios</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Botones de contacto a la derecha -->
+                <div class="header-contact">
+                    <a href="https://wa.me/523221285656" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>LYD - Logística y Distribución Del Pacífico</h1>
+            <p>¡Tu distribuidor oficial de equipos Husqvarna!</p>
+            <p>Equipos profesionales para jardín</p>
+            <a href="#productos" class="cta-button">Ver Productos</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="productos">
+        <div class="container">
+            <h2>Nuestros Productos</h2>
+            <div class="products-grid">
+                <!-- Motocultivadores -->
+                <div class="product-card">
+                    <img src="images/motocultivadores-banner-website-colors.jpg" alt="Motocultivadores Husqvarna" class="product-image">
+                    <div class="card-content">
+                        <h3>Motocultivadores Husqvarna</h3>
+                        <p>Potencia y precisión para preparación de terrenos</p>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check"></i> 2 modelos profesionales</li>
+                            <li><i class="fas fa-check"></i> Motores hasta 5.5 HP</li>
+                            <li><i class="fas fa-check"></i> Transmisión en baño de aceite</li>
+                            <li><i class="fas fa-check"></i> Ancho de trabajo 62-95 cm</li>
+                            <li><i class="fas fa-check"></i> Uso intensivo comercial</li>
+                        </ul>
+                        <p><strong>Desde: $35,500</strong></p>
+                        <div class="card-buttons">
+                            <a href="motocultivadores.html" class="btn-primary">Ver Motocultivadores</a>
+                            <a href="https://wa.me/526673298505" class="btn-whatsapp">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Motosierras -->
+                <div class="product-card">
+                    <img src="images/motosierras-banner.jpg" alt="Motosierras Husqvarna" class="product-image">
+                    <div class="card-content">
+                        <h3>Motosierras y Recortadoras Husqvarna</h3>
+                        <p>Equipos profesionales para corte de madera y poda</p>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check"></i> 12 modelos disponibles</li>
+                            <li><i class="fas fa-check"></i> Tecnología X-Torq</li>
+                            <li><i class="fas fa-check"></i> Sistema anti-vibración</li>
+                            <li><i class="fas fa-check"></i> Arranque fácil</li>
+                            <li><i class="fas fa-check"></i> Uso profesional tiempo completo</li>
+                        </ul>
+                        <p><strong>Desde: $4,499</strong></p>
+                        <div class="card-buttons">
+                            <a href="motosierras.html" class="btn-primary">Ver Motosierras</a>
+                            <a href="https://wa.me/526673298505" class="btn-whatsapp">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Podadoras -->
+                <div class="product-card">
+                    <img src="images/podadoras-banner.jpg" alt="Podadoras Husqvarna" class="product-image">
+                    <div class="card-content">
+                        <h3>Podadoras Husqvarna</h3>
+                        <p>Mantén tu jardín perfecto</p>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check"></i> Podadoras autopropulsadas</li>
+                            <li><i class="fas fa-check"></i> Sistema 3 en 1</li>
+                            <li><i class="fas fa-check"></i> Múltiples niveles de corte</li>
+                            <li><i class="fas fa-check"></i> Motores confiables</li>
+                            <li><i class="fas fa-check"></i> Para jardines medianos y grandes</li>
+                        </ul>
+                        <div class="card-buttons">
+                            <a href="podadoras.html" class="btn-primary">Ver Podadoras</a>
+                            <a href="https://wa.me/526673298505" class="btn-whatsapp">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Distribuidor Oficial Husqvarna</h2>
+                    <p>Como distribuidores oficiales de la prestigiosa marca sueca <strong>Husqvarna</strong>, líder mundial en equipos para jardín y forestales, garantizamos productos originales con el respaldo de una marca reconocida internacionalmente.</p>
+                    <p><strong>335+</strong> Años de Historia Husqvarna<br>
+                    <strong>100%</strong> Productos Originales<br>
+                    <strong>24/7</strong> Soporte Técnico</p>
+                    <ul class="about-features">
+                        <li><i class="fas fa-check-circle"></i> Productos originales con garantía oficial</li>
+                        <li><i class="fas fa-tools"></i> Servicio técnico especializado</li>
+                        <li><i class="fas fa-truck"></i> Distribución en todo México</li>
+                        <li><i class="fas fa-leaf"></i> Equipos para jardín, forestal y agrícola</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="images/lyd-corporate-info.png" alt="LYD Información Corporativa">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="https://i.ibb.co/p60cXvdb/Captura-de-pantalla-2025-09-16-a-la-s-6-41-38-p-m.png" alt="LYD - Logística y Distribución Nacional" class="lyd-official-logo" style="margin-bottom: 20px;">
+                    <p>Distribución nacional de maquinaria agrícola y equipos profesionales Husqvarna. Calidad y confianza garantizada.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Productos</h3>
+                    <ul>
+                        <li><a href="motocultivadores.html">Motocultivadores</a></li>
+                        <li><a href="motosierras.html">Motosierras</a></li>
+                        <li><a href="podadoras.html">Podadoras</a></li>
+                        <li><a href="#sopladoras">Sopladoras</a></li>
+                        <li><a href="#fumigadoras">Fumigadoras</a></li>
+                        <li><a href="#generadores">Generadores</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Empresa</h3>
+                    <ul>
+                        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#garantia">Garantía</a></li>
+                        <li><a href="#soporte">Soporte Técnico</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Guadalajara, Jalisco</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/523221285656">WhatsApp</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-shopping-cart"></i>
+                            <a href="#coppel">Disponible en Coppel.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 LYD - Logística y Distribución Nacional. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/search-internal.js"></script>
+</body>
+</html>

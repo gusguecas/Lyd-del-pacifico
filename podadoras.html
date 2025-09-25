@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podadoras Husqvarna - LYD Logística y Distribución Nacional</title>
+    <meta name="description" content="Podadoras Husqvarna profesionales. Equipos para corte de césped y jardinería profesional. Distribución nacional por LYD - Disponibles en Coppel.com">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Embedded CSS to ensure proper loading -->
+    <style>
+/* Husqvarna Website Styles - Matching Brand Identity */
+
+/* Import Coppel Font Alternative */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap');
+
+/* CSS Variables - Brand Colors */
+:root {
+    --primary-navy: #1e3a5f;        /* Dark navy blue from promotions */
+    --primary-orange: #ff6600;      /* Orange from model numbers */
+    --accent-red: #dc143c;          /* Red for special prices */
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --dark-gray: #333333;
+    --text-gray: #666666;
+    --success-green: #28a745;
+    --whatsapp-green: #25d366;
+    
+    /* Coppel Brand Colors - Oficiales */
+    --coppel-blue: #1e4c8c;        /* Medium Blue más cercano al original */
+    --coppel-yellow: #F0D224;      /* Yellow R240, G210, B36 */
+    --coppel-white: #FFFFFF;       /* White R255, G255, B255 */
+    
+    /* Coppel Typography */
+    --coppel-font: 'Sharp Sans No 2', 'Inter', 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+    
+    /* Typography */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-xxl: 4rem;
+    
+    /* Borders */
+    --border-radius: 8px;
+    --border-radius-lg: 12px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --box-shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary) !important;
+    font-weight: var(--font-weight-normal) !important;
+    line-height: 1.6 !important;
+    color: var(--dark-gray) !important;
+    background-color: var(--white) !important;
+}
+
+.container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 var(--spacing-sm) !important;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--font-weight-bold) !important;
+    line-height: 1.2 !important;
+    margin-bottom: var(--spacing-sm) !important;
+}
+
+h1 {
+    font-size: 2.5rem !important;
+    color: var(--primary-orange) !important;
+}
+
+h2 {
+    font-size: 2rem !important;
+    color: var(--primary-navy) !important;
+}
+
+h3 {
+    font-size: 1.5rem !important;
+    color: var(--primary-navy) !important;
+}
+
+p {
+    margin-bottom: var(--spacing-sm) !important;
+    color: var(--text-gray) !important;
+}
+
+a {
+    color: var(--primary-orange) !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease !important;
+}
+
+a:hover {
+    color: var(--primary-navy) !important;
+}
+
+/* Header */
+.header {
+    background-color: var(--primary-navy) !important;
+    color: var(--white) !important;
+    padding: var(--spacing-md) 0 !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    box-shadow: var(--box-shadow) !important;
+}
+
+.header-content {
+    display: grid !important;
+    grid-template-columns: 1fr 2fr 1fr !important;
+    align-items: center !important;
+    gap: var(--spacing-md) !important;
+    min-height: 115px !important;
+}
+
+.logo {
+    justify-self: start !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--spacing-xs) !important;
+}
+
+.nav {
+    justify-self: center !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.header-right {
+    justify-self: end !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--spacing-xs) !important;
+    align-items: flex-end !important;
+}
+
+/* LYD Header Logo */
+.lyd-header-logo {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+}
+
+.lyd-official-logo {
+    height: 112px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+    max-width: 625px !important;
+}
+
+/* Hover effect for LYD logo */
+.logo:hover .lyd-official-logo {
+    opacity: 0.9 !important;
+    transform: scale(1.02) !important;
+    transition: all 0.3s ease !important;
+}
+
+.nav-list {
+    display: flex !important;
+    list-style: none !important;
+    gap: var(--spacing-md) !important;
+    align-items: center !important;
+    height: 100% !important;
+}
+
+.nav-list > li {
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+}
+
+.nav-list > li > a {
+    color: var(--white) !important;
+    font-weight: var(--font-weight-medium) !important;
+    font-size: 1.1rem !important;
+    padding: var(--spacing-xs) var(--spacing-sm) !important;
+    border-radius: var(--border-radius) !important;
+    transition: background-color 0.3s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+    min-height: 40px !important;
+}
+
+.nav-list > li > a:hover {
+    background-color: var(--primary-orange) !important;
+}
+
+.nav-list li a.active {
+    background-color: var(--primary-orange) !important;
+    color: var(--white) !important;
+}
+
+/* Dropdown Menu Styles */
+.nav-dropdown {
+    position: relative !important;
+}
+
+.dropdown-toggle {
+    display: flex !important;
+    align-items: center !important;
+    gap: var(--spacing-xs) !important;
+    color: var(--white) !important;
+    font-weight: var(--font-weight-medium) !important;
+    font-size: 1.1rem !important;
+    padding: var(--spacing-xs) var(--spacing-sm) !important;
+    border-radius: var(--border-radius) !important;
+    transition: background-color 0.3s ease !important;
+    height: 100% !important;
+    min-height: 40px !important;
+}
+
+.dropdown-toggle i {
+    transition: transform 0.3s ease !important;
+    font-size: 0.8rem !important;
+    margin-left: 2px !important;
+}
+
+.nav-dropdown:hover .dropdown-toggle {
+    background-color: var(--primary-orange) !important;
+}
+
+.nav-dropdown:hover .dropdown-toggle i {
+    transform: rotate(180deg) !important;
+}
+
+.dropdown-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    background-color: var(--white) !important;
+    min-width: 280px !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: var(--box-shadow-lg) !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(-10px) !important;
+    transition: all 0.3s ease !important;
+    z-index: 1000 !important;
+    list-style: none !important;
+    padding: var(--spacing-sm) 0 !important;
+    margin: 0 !important;
+    margin-top: 8px !important;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+}
+
+.dropdown-menu li {
+    margin: 0 !important;
+}
+
+.dropdown-menu a {
+    display: block !important;
+    padding: var(--spacing-sm) var(--spacing-md) !important;
+    color: var(--primary-navy) !important;
+    font-weight: var(--font-weight-medium) !important;
+    border-radius: 0 !important;
+    transition: all 0.3s ease !important;
+    border-left: 3px solid transparent !important;
+    white-space: nowrap !important;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--light-gray) !important;
+    border-left-color: var(--primary-orange) !important;
+    color: var(--primary-orange) !important;
+    padding-left: calc(var(--spacing-md) + var(--spacing-xs)) !important;
+}
+
+/* Header WhatsApp */
+.header-whatsapp {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+}
+
+.header-whatsapp > div:hover {
+    background-color: #1faa59 !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Search Container */
+.search-container {
+    position: relative !important;
+    margin-top: var(--spacing-xs) !important;
+}
+
+.search-form {
+    display: flex !important;
+    align-items: center !important;
+    background-color: var(--white) !important;
+    border-radius: var(--border-radius) !important;
+    overflow: hidden !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    transition: box-shadow 0.3s ease !important;
+}
+
+.search-form:focus-within {
+    box-shadow: 0 4px 12px rgba(255, 102, 0, 0.3) !important;
+}
+
+.search-input {
+    border: none !important;
+    outline: none !important;
+    padding: var(--spacing-xs) var(--spacing-sm) !important;
+    font-size: 0.8rem !important;
+    width: 160px !important;
+    font-family: var(--font-primary) !important;
+    color: var(--dark-gray) !important;
+}
+
+.search-btn {
+    background-color: var(--primary-orange) !important;
+    border: none !important;
+    padding: var(--spacing-xs) var(--spacing-sm) !important;
+    color: var(--white) !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.search-btn:hover {
+    background-color: #e55a00 !important;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: var(--spacing-sm) var(--spacing-md) !important;
+    border: none !important;
+    border-radius: var(--border-radius) !important;
+    font-weight: var(--font-weight-semibold) !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    font-size: 1rem !important;
+    min-height: 48px !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-orange) !important;
+    color: var(--white) !important;
+}
+
+.btn-primary:hover {
+    background-color: #e55a00 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: var(--box-shadow-lg) !important;
+}
+
+.btn-whatsapp {
+    background-color: var(--whatsapp-green) !important;
+    color: var(--white) !important;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1faa59 !important;
+}
+
+/* Category Pages Styles */
+.category-hero {
+    padding: var(--spacing-xl) 0 !important;
+    background-color: var(--light-gray) !important;
+}
+
+.category-banner-image {
+    width: 100% !important;
+    max-width: 1000px !important;
+    height: auto !important;
+    object-fit: cover !important;
+    border-radius: var(--border-radius-lg) !important;
+    box-shadow: var(--box-shadow-lg) !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+.category-info-new {
+    padding: var(--spacing-xxl) 0 !important;
+    background: linear-gradient(135deg, var(--white) 0%, var(--light-gray) 100%) !important;
+}
+
+.category-header {
+    text-align: center !important;
+    margin-bottom: var(--spacing-xxl) !important;
+}
+
+.category-header h1 {
+    font-size: 3.5rem !important;
+    color: var(--primary-navy) !important;
+    margin-bottom: var(--spacing-sm) !important;
+    font-weight: var(--font-weight-bold) !important;
+}
+
+.category-subtitle {
+    font-size: 1.4rem !important;
+    color: var(--primary-orange) !important;
+    font-weight: var(--font-weight-semibold) !important;
+    margin-bottom: var(--spacing-lg) !important;
+}
+
+.category-text {
+    font-size: 1.2rem !important;
+    line-height: 1.8 !important;
+    color: var(--text-gray) !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
+}
+
+/* Professional showcase */
+.professional-showcase {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+/* Características Compactas */
+.compact-features {
+    background: var(--white) !important;
+    border-radius: var(--border-radius-lg) !important;
+    padding: var(--spacing-xl) !important;
+    margin-bottom: var(--spacing-xl) !important;
+    box-shadow: var(--box-shadow) !important;
+}
+
+.compact-features h3 {
+    font-size: 1.8rem !important;
+    color: var(--primary-navy) !important;
+    text-align: center !important;
+    margin-bottom: var(--spacing-lg) !important;
+    font-weight: var(--font-weight-bold) !important;
+}
+
+.features-grid-compact {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: var(--spacing-lg) !important;
+}
+
+.compact-feature {
+    display: flex !important;
+    align-items: center !important;
+    gap: var(--spacing-md) !important;
+    padding: var(--spacing-md) !important;
+    background: var(--light-gray) !important;
+    border-radius: var(--border-radius) !important;
+    transition: all 0.3s ease !important;
+    border-left: 4px solid var(--primary-orange) !important;
+}
+
+.compact-feature:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: var(--box-shadow) !important;
+    background: var(--white) !important;
+}
+
+.feature-icon-small {
+    width: 50px !important;
+    height: 50px !important;
+    background: linear-gradient(135deg, var(--primary-orange) 0%, var(--accent-red) 100%) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    box-shadow: 0 4px 8px rgba(255, 102, 0, 0.3) !important;
+}
+
+.feature-icon-small i {
+    font-size: 1.2rem !important;
+    color: var(--white) !important;
+}
+
+.feature-text {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--spacing-xs) !important;
+}
+
+.feature-text strong {
+    font-size: 1.1rem !important;
+    color: var(--primary-navy) !important;
+    font-weight: var(--font-weight-semibold) !important;
+}
+
+.feature-text span {
+    font-size: 0.9rem !important;
+    color: var(--text-gray) !important;
+    line-height: 1.4 !important;
+}
+
+/* Llamada a la acción */
+.showcase-cta {
+    background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%) !important;
+    border-radius: var(--border-radius-lg) !important;
+    padding: var(--spacing-xxl) !important;
+    text-align: center !important;
+    border: 2px solid var(--primary-orange) !important;
+    position: relative !important;
+}
+
+.cta-content h3 {
+    font-size: 2.2rem !important;
+    color: var(--primary-navy) !important;
+    margin-bottom: var(--spacing-md) !important;
+    font-weight: var(--font-weight-bold) !important;
+}
+
+.cta-content p {
+    font-size: 1.2rem !important;
+    color: var(--text-gray) !important;
+    margin-bottom: var(--spacing-xl) !important;
+    line-height: 1.6 !important;
+}
+
+.cta-buttons {
+    display: flex !important;
+    justify-content: center !important;
+    gap: var(--spacing-lg) !important;
+    flex-wrap: wrap !important;
+}
+
+.cta-btn {
+    padding: var(--spacing-lg) var(--spacing-xxl) !important;
+    border-radius: var(--border-radius-lg) !important;
+    font-size: 1.1rem !important;
+    font-weight: var(--font-weight-semibold) !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    min-width: 160px !important;
+    text-align: center !important;
+    box-shadow: var(--box-shadow) !important;
+}
+
+.cta-btn.primary {
+    background: linear-gradient(135deg, var(--primary-orange) 0%, var(--accent-red) 100%) !important;
+    color: var(--white) !important;
+    border: 2px solid transparent !important;
+}
+
+.cta-btn.primary:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 12px 24px rgba(255, 102, 0, 0.3) !important;
+    background: linear-gradient(135deg, var(--accent-red) 0%, var(--primary-orange) 100%) !important;
+}
+
+.cta-btn.secondary {
+    background: var(--white) !important;
+    color: var(--primary-navy) !important;
+    border: 2px solid var(--primary-navy) !important;
+}
+
+.cta-btn.secondary:hover {
+    background: var(--primary-navy) !important;
+    color: var(--white) !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 12px 24px rgba(30, 58, 95, 0.3) !important;
+}
+
+/* Products Placeholder */
+.product-placeholder {
+    background-color: var(--white) !important;
+    border-radius: var(--border-radius-lg) !important;
+    padding: var(--spacing-xxl) !important;
+    text-align: center !important;
+    box-shadow: var(--box-shadow) !important;
+    max-width: 500px !important;
+    margin: 0 auto !important;
+}
+
+.placeholder-content i {
+    font-size: 4rem !important;
+    color: var(--primary-orange) !important;
+    margin-bottom: var(--spacing-lg) !important;
+}
+
+.placeholder-content h3 {
+    font-size: 1.8rem !important;
+    color: var(--primary-navy) !important;
+    margin-bottom: var(--spacing-md) !important;
+}
+
+.placeholder-content p {
+    font-size: 1.1rem !important;
+    color: var(--text-gray) !important;
+    margin-bottom: var(--spacing-xl) !important;
+}
+
+.placeholder-actions {
+    display: flex !important;
+    justify-content: center !important;
+    gap: var(--spacing-md) !important;
+    flex-wrap: wrap !important;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-gray) !important;
+    color: var(--white) !important;
+    padding: var(--spacing-xxl) 0 var(--spacing-lg) !important;
+}
+
+.footer-content {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: var(--spacing-xl) !important;
+    margin-bottom: var(--spacing-xl) !important;
+}
+
+.footer-section h4 {
+    color: var(--primary-orange) !important;
+    margin-bottom: var(--spacing-md) !important;
+}
+
+.footer-section ul {
+    list-style: none !important;
+}
+
+.footer-section ul li {
+    margin-bottom: var(--spacing-sm) !important;
+}
+
+.footer-section ul li a {
+    color: var(--white) !important;
+    transition: color 0.3s ease !important;
+}
+
+.footer-section ul li a:hover {
+    color: var(--primary-orange) !important;
+}
+
+.footer-brand-logos {
+    display: flex !important;
+    align-items: center !important;
+    gap: var(--spacing-md) !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    margin-bottom: var(--spacing-sm) !important;
+}
+
+.footer-logo-img {
+    height: 35px !important;
+    display: block !important;
+}
+
+.lyd-official-footer-logo {
+    height: 35px !important;
+    display: block !important;
+    object-fit: contain !important;
+}
+
+.footer-bottom {
+    border-top: 1px solid #555 !important;
+    padding-top: var(--spacing-lg) !important;
+    text-align: center !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto auto auto !important;
+        text-align: center !important;
+        gap: var(--spacing-sm) !important;
+        justify-items: center !important;
+        min-height: 110px !important;
+    }
+    
+    .logo {
+        justify-self: center !important;
+    }
+    
+    .nav {
+        justify-self: center !important;
+    }
+    
+    .header-right {
+        justify-self: center !important;
+        flex-direction: row !important;
+        gap: var(--spacing-md) !important;
+        align-items: center !important;
+    }
+    
+    .search-container {
+        margin-top: 0 !important;
+    }
+    
+    .search-input {
+        width: 140px !important;
+    }
+    
+    .nav-list {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+    
+    .category-header h1 {
+        font-size: 2.5rem !important;
+    }
+    
+    .category-subtitle {
+        font-size: 1.2rem !important;
+    }
+    
+    .category-text {
+        font-size: 1rem !important;
+        padding: 0 var(--spacing-md) !important;
+    }
+    
+    .features-grid-compact {
+        grid-template-columns: 1fr !important;
+        gap: var(--spacing-md) !important;
+    }
+    
+    .compact-features {
+        padding: var(--spacing-lg) !important;
+    }
+    
+    .compact-features h3 {
+        font-size: 1.5rem !important;
+    }
+    
+    .showcase-cta {
+        padding: var(--spacing-lg) !important;
+    }
+    
+    .cta-content h3 {
+        font-size: 1.8rem !important;
+    }
+    
+    .cta-content p {
+        font-size: 1rem !important;
+    }
+    
+    .cta-buttons {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    .cta-btn {
+        width: 100% !important;
+        max-width: 280px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 var(--spacing-sm) !important;
+    }
+    
+    .category-info-new {
+        padding: var(--spacing-lg) 0 !important;
+    }
+    
+    .category-header h1 {
+        font-size: 2rem !important;
+    }
+    
+    .compact-features {
+        padding: var(--spacing-md) !important;
+    }
+    
+    .compact-feature {
+        padding: var(--spacing-sm) !important;
+    }
+    
+    .feature-icon-small {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    
+    .feature-icon-small i {
+        font-size: 1rem !important;
+    }
+    
+    .feature-text strong {
+        font-size: 1rem !important;
+    }
+    
+    .feature-text span {
+        font-size: 0.85rem !important;
+    }
+    
+    .lyd-official-logo {
+        height: 80px !important;
+        max-width: 400px !important;
+    }
+    
+    .header-right {
+        flex-direction: column !important;
+        gap: var(--spacing-xs) !important;
+        align-items: center !important;
+    }
+    
+    .search-input {
+        width: 120px !important;
+        font-size: 0.7rem !important;
+    }
+    
+    .placeholder-content {
+        padding: var(--spacing-lg) !important;
+    }
+    
+    .placeholder-content i {
+        font-size: 3rem !important;
+    }
+}
+</style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo a la izquierda -->
+                <div class="logo">
+                    <div class="lyd-header-logo">
+                        <img src="https://i.ibb.co/p60cXvdb/Captura-de-pantalla-2025-09-16-a-la-s-6-41-38-p-m.png" alt="LYD - Logística y Distribución Nacional" class="lyd-official-logo">
+                    </div>
+                </div>
+                
+                <!-- Navegación central -->
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                        <li class="nav-dropdown">
+                            <a href="#productos" class="dropdown-toggle">
+                                Productos <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="motocultivadores.html"><i class="fas fa-seedling"></i> Motocultivadores</a></li>
+                                <li><a href="motosierras.html"><i class="fas fa-cut"></i> Motosierras y Recortadoras</a></li>
+                                <li><a href="podadoras.html" class="active"><i class="fas fa-leaf"></i> Podadoras</a></li>
+                                <li><a href="#sopladoras"><i class="fas fa-wind"></i> Sopladoras y Desbrozadoras</a></li>
+                                <li><a href="#fumigadoras"><i class="fas fa-spray-can"></i> Fumigadoras</a></li>
+                                <li><a href="#generadores"><i class="fas fa-bolt"></i> Bombas y Generadores</a></li>
+                                <li><a href="#equipos"><i class="fas fa-hard-hat"></i> Equipos y Consumibles</a></li>
+                                <li><a href="#repuestos"><i class="fas fa-tools"></i> Piezas y Accesorios</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Botones de contacto a la derecha -->
+                <div class="header-contact">
+                    <a href="https://wa.me/523221285656" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="https://wa.me/523221285656" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="product-hero">
+        <div class="container">
+            <div class="hero-content">
+                <img src="images/podadoras-banner.jpg" alt="Podadoras Husqvarna" class="hero-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Navegación de productos -->
+    <section class="product-nav">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a> > <span>Podadoras</span>
+            </div>
+            <div class="product-info">
+                <h1>Podadoras Husqvarna</h1>
+                <p>Equipos profesionales para el cuidado del césped y jardinería</p>
+                <div class="product-count">Equipos profesionales para mantenimiento de áreas verdes</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Sección Introducción de Podadoras -->
+            <section class="mower-intro" style="padding: 60px 0; background: linear-gradient(135deg, #253967 0%, #1e2c5a 100%); color: white;">
+                <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                    <div class="intro-content" style="text-align: center;">
+                        <h2 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 20px; color: white;">Podadoras Husqvarna</h2>
+                        <p style="font-size: 1.2rem; color: #e0e7ff; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">Equipos profesionales para corte de césped y mantenimiento de jardines</p>
+                        <p style="color: #cbd5e1; max-width: 900px; margin: 0 auto; line-height: 1.6;">Las podadoras Husqvarna son la herramienta perfecta para el mantenimiento profesional de áreas verdes, jardines y césped. Diseñadas para uso intensivo, estos equipos cuentan con motores potentes de 4 tiempos, sistemas de corte avanzados y tecnología Automower que garantizan un corte preciso, uniforme y con menores emisiones.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Características Principales -->
+            <section class="mower-features" style="padding: 80px 0; background: white;">
+                <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                    <h2 style="text-align: center; font-size: 2.2rem; color: #253967; margin-bottom: 60px; font-weight: bold;">Características Principales</h2>
+                    
+                    <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;">
+                        <!-- Característica 1 -->
+                        <div class="feature-item" style="padding: 30px 20px; border-left: 4px solid #ff6600; background: #f8faff;">
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <div style="width: 50px; height: 50px; background: #ff6600; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                                    <i class="fas fa-cog" style="color: white; font-size: 20px;"></i>
+                                </div>
+                                <h3 style="color: #253967; font-size: 1.3rem; font-weight: bold; margin: 0;">Motor BioClip</h3>
+                            </div>
+                            <p style="color: #666; line-height: 1.6; margin: 0;">Tecnología de 4 tiempos con menor consumo y emisiones reducidas para un corte más limpio</p>
+                        </div>
+
+                        <!-- Característica 2 -->
+                        <div class="feature-item" style="padding: 30px 20px; border-left: 4px solid #ff6600; background: #f8faff;">
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <div style="width: 50px; height: 50px; background: #ff6600; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                                    <i class="fas fa-leaf" style="color: white; font-size: 20px;"></i>
+                                </div>
+                                <h3 style="color: #253967; font-size: 1.3rem; font-weight: bold; margin: 0;">Sistema Mulching</h3>
+                            </div>
+                            <p style="color: #666; line-height: 1.6; margin: 0;">Corta y fertiliza simultáneamente, creando un mantillo natural que nutre el césped</p>
+                        </div>
+
+                        <!-- Característica 3 -->
+                        <div class="feature-item" style="padding: 30px 20px; border-left: 4px solid #ff6600; background: #f8faff;">
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <div style="width: 50px; height: 50px; background: #ff6600; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                                    <i class="fas fa-magic" style="color: white; font-size: 20px;"></i>
+                                </div>
+                                <h3 style="color: #253967; font-size: 1.3rem; font-weight: bold; margin: 0;">Arranque Suave</h3>
+                            </div>
+                            <p style="color: #666; line-height: 1.6; margin: 0;">Sistema de arranque fácil con reducción de esfuerzo para encendido sin complicaciones</p>
+                        </div>
+
+                        <!-- Característica 4 -->
+                        <div class="feature-item" style="padding: 30px 20px; border-left: 4px solid #ff6600; background: #f8faff;">
+                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                                <div style="width: 50px; height: 50px; background: #ff6600; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                                    <i class="fas fa-tools" style="color: white; font-size: 20px;"></i>
+                                </div>
+                                <h3 style="color: #253967; font-size: 1.3rem; font-weight: bold; margin: 0;">Uso Profesional</h3>
+                            </div>
+                            <p style="color: #666; line-height: 1.6; margin: 0;">Ideal para jardineros profesionales y mantenimiento de grandes áreas verdes</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Modelos Disponibles -->
+            <section class="mower-models" style="padding: 80px 0; background: #f8faff;">
+                <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                    <div class="models-header" style="text-align: center; margin-bottom: 60px; padding: 40px; background: white; border-radius: 15px; border: 2px solid #ff6600;">
+                        <h2 style="color: #253967; font-size: 2rem; margin-bottom: 15px; font-weight: bold;">¿Listo para trabajar como un profesional?</h2>
+                        <p style="color: #666; font-size: 1.1rem; margin-bottom: 0;">Explora nuestros modelos disponibles y encuentra la podadora perfecta para tu proyecto</p>
+                    </div>
+                    
+                    <div class="models-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 800px; margin: 0 auto;">
+                        <!-- Modelo LC 141C -->
+                        <button style="background: linear-gradient(135deg, #ff6600, #e55a00); color: white; border: none; padding: 20px; border-radius: 10px; font-weight: bold; cursor: pointer; transition: all 0.3s ease; min-height: 60px; font-size: 1rem;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(255,102,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                            Ver Husqvarna LC 141C
+                        </button>
+                        
+                        <!-- Modelo LC 247S -->
+                        <button style="background: linear-gradient(135deg, #ff6600, #e55a00); color: white; border: none; padding: 20px; border-radius: 10px; font-weight: bold; cursor: pointer; transition: all 0.3s ease; min-height: 60px; font-size: 1rem;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(255,102,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                            Ver Husqvarna LC 247S
+                        </button>
+                        
+                        <!-- Modelo LC 353V -->
+                        <button style="background: linear-gradient(135deg, #ff6600, #e55a00); color: white; border: none; padding: 20px; border-radius: 10px; font-weight: bold; cursor: pointer; transition: all 0.3s ease; min-height: 60px; font-size: 1rem;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(255,102,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                            Ver Husqvarna LC 353V
+                        </button>
+                        
+                        <!-- Modelo Automower -->
+                        <button style="background: linear-gradient(135deg, #ff6600, #e55a00); color: white; border: none; padding: 20px; border-radius: 10px; font-weight: bold; cursor: pointer; transition: all 0.3s ease; min-height: 60px; font-size: 1rem;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(255,102,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                            Ver Husqvarna Automower
+                        </button>
+                        
+                        <!-- Modelo R 216T -->
+                        <button style="background: linear-gradient(135deg, #ff6600, #e55a00); color: white; border: none; padding: 20px; border-radius: 10px; font-weight: bold; cursor: pointer; transition: all 0.3s ease; min-height: 60px; font-size: 1rem;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(255,102,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                            Ver Husqvarna R 216T
+                        </button>
+                        
+                        <!-- Modelo LC 551SP -->
+                        <button style="background: linear-gradient(135deg, #ff6600, #e55a00); color: white; border: none; padding: 20px; border-radius: 10px; font-weight: bold; cursor: pointer; transition: all 0.3s ease; min-height: 60px; font-size: 1rem;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(255,102,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                            Ver Husqvarna LC 551SP
+                        </button>
+                    </div>
+                    
+                    <!-- Próximamente -->
+                    <div style="text-align: center; margin-top: 50px; padding: 30px; background: white; border-radius: 12px; border: 1px solid #e5e7eb;">
+                        <h3 style="color: #253967; margin-bottom: 15px;">Próximamente disponibles</h3>
+                        <p style="color: #666; margin-bottom: 20px;">Estamos trabajando para traerte el catálogo completo de podadoras profesionales</p>
+                        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                            <a href="motosierras.html" style="background: #253967; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; display: inline-flex; align-items: center;">
+                                <i class="fas fa-cut" style="margin-right: 8px;"></i>Ver Motosierras
+                            </a>
+                            <a href="motocultivadores.html" style="background: #ff6600; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; display: inline-flex; align-items: center;">
+                                <i class="fas fa-seedling" style="margin-right: 8px;"></i>Ver Motocultivadores
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="lyd-footer-logo">
+                        <img src="https://i.ibb.co/p60cXvdb/Captura-de-pantalla-2025-09-16-a-la-s-6-41-38-p-m.png" alt="LYD - Logística y Distribución Nacional" class="lyd-official-footer-logo">
+                    </div>
+                    <p>Distribución nacional de maquinaria agrícola y equipos profesionales Husqvarna. Calidad y confianza garantizada.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Productos</h3>
+                    <ul>
+                        <li><a href="motocultivadores.html">Motocultivadores</a></li>
+                        <li><a href="motosierras.html">Motosierras</a></li>
+                        <li><a href="podadoras.html">Podadoras</a></li>
+                        <li><a href="#sopladoras">Sopladoras</a></li>
+                        <li><a href="#fumigadoras">Fumigadoras</a></li>
+                        <li><a href="#generadores">Generadores</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Empresa</h3>
+                    <ul>
+                        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#garantia">Garantía</a></li>
+                        <li><a href="#soporte">Soporte Técnico</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Guadalajara, Jalisco</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/523221285656">WhatsApp</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-shopping-cart"></i>
+                            <a href="#coppel">Disponible en Coppel.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 LYD - Logística y Distribución Nacional. Todos los derechos reservados.</p>
+                    <div class="footer-links">
+                        <a href="#privacidad">Política de Privacidad</a>
+                        <a href="#terminos">Términos y Condiciones</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+// Embedded JavaScript for podadoras.html
+
+// Initialize everything when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('🌱 LYD - Podadoras Husqvarna loaded');
+});
+</script>
+
+<!-- JavaScript Externo -->
+<script src="js/main.js"></script>
+<script src="js/search-internal.js"></script>
+</body>
+</html>
