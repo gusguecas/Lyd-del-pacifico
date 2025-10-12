@@ -1984,7 +1984,7 @@ function initializeProductTabs() {
             // Update active panel
             tabPanels.forEach(panel => {
                 panel.classList.remove('active');
-                if (panel.id === targetTab) {
+                if (panel.getAttribute('data-panel') === targetTab) {
                     panel.classList.add('active');
                 }
             });
@@ -2023,9 +2023,5 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeImageGallery();
 });
 </script>
-
-<!-- JavaScript Externo -->
-<script src="js/main.js"></script>
-<script src="js/search-internal.js"></script>
 </body>
 </html>

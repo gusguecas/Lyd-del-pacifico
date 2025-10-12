@@ -480,189 +480,60 @@ function initializeProductSearch() {
 function performProductSearch(searchTerm) {
     const searchInput = document.getElementById('searchInput');
     
-    // Base de datos de productos disponibles en el sitio web LYD
+    // Define search categories and products
     const searchDatabase = {
-        // Motosierras específicas
-        '120': {
-            name: 'Husqvarna 120',
-            page: 'motosierras.html',
+        '525ib': {
+            name: 'Husqvarna 525iB - Sopladora',
+            element: 'productos',
+            coppelUrl: 'https://www.coppel.com/buscar?q=husqvarna+525ib+sopladora',
             type: 'product'
         },
-        '135': {
-            name: 'Husqvarna 135',
-            page: 'motosierras.html',
-            type: 'product'
-        },
-        '440e': {
-            name: 'Husqvarna 440e II - Motosierra',
-            page: 'motosierras.html',
-            elementId: 'husqvarna-440e',
-            section: '#motosierras-section',
-            type: 'product'
-        },
-        '450e': {
-            name: 'Husqvarna 450e II - Motosierra',
-            page: 'motosierras.html',
-            elementId: 'husqvarna-450e',
-            section: '#motosierras-section',
-            type: 'product'
-        },
-        '455': {
-            name: 'Husqvarna 455 Rancher - Motosierra',
-            page: 'motosierras.html',
-            elementId: 'husqvarna-455',
-            section: '#motosierras-section',
-            type: 'product'
-        },
-        'rancher': {
-            name: 'Husqvarna 455 Rancher - Motosierra',
-            page: 'motosierras.html',
-            elementId: 'husqvarna-455',
-            section: '#motosierras-section',
-            type: 'product'
-        },
-        '545': {
-            name: 'Husqvarna 545 Mark II - Motosierra',
-            page: 'motosierras.html',
-            elementId: 'husqvarna-545',
-            section: '#motosierras-section',
-            type: 'product'
-        },
-        '272xp': {
-            name: 'Husqvarna 272XP - Motosierra',
-            page: 'motosierras.html',
-            elementId: 'husqvarna-272xp',
-            section: '#motosierras-section',
-            type: 'product'
-        },
-        '272': {
-            name: 'Husqvarna 272XP - Motosierra',
-            page: 'motosierras.html',
-            elementId: 'husqvarna-272xp',
-            section: '#motosierras-section',
-            type: 'product'
-        },
-        '281xp': {
-            name: 'Husqvarna 281XP - Motosierra',
-            page: 'motosierras.html',
-            elementId: 'husqvarna-281xp',
-            section: '#motosierras-section',
-            type: 'product'
-        },
-        '281': {
-            name: 'Husqvarna 281XP - Motosierra',
-            page: 'motosierras.html',
-            elementId: 'husqvarna-281xp',
-            section: '#motosierras-section',
-            type: 'product'
-        },
-        '61': {
-            name: 'Husqvarna 61 - Motosierra',
-            page: 'motosierras.html',
-            elementId: 'husqvarna-61',
-            section: '#motosierras-section',
-            type: 'product'
-        },
-        '353': {
-            name: 'Husqvarna 353 - Motosierra',
-            page: 'motosierras.html',
-            elementId: 'husqvarna-353',
-            section: '#motosierras-section',
-            type: 'product'
-        },
-        '365': {
-            name: 'Husqvarna 365 - Motosierra',
-            page: 'motosierras.html',
-            elementId: 'husqvarna-365',
-            section: '#motosierras-section',
-            type: 'product'
-        },
-        '562xp': {
-            name: 'Husqvarna 562XP - Motosierra',
-            page: 'motosierras.html',
-            elementId: 'husqvarna-562xp',
-            section: '#motosierras-section',
-            type: 'product'
-        },
-        '562': {
-            name: 'Husqvarna 562XP - Motosierra',
-            page: 'motosierras.html',
-            elementId: 'husqvarna-562xp',
-            section: '#motosierras-section',
-            type: 'product'
-        },
-        
-        // Motocultivadores específicos
-        'tf338': {
-            name: 'Husqvarna TF338 - Motocultivador',
-            page: 'motocultivadores.html',
-            elementId: 'husqvarna-tf338',
-            section: '#motocultivadores-section',
-            type: 'product'
-        },
-        'tr262': {
-            name: 'Husqvarna TR262 - Motocultivador',
-            page: 'motocultivadores.html',
-            elementId: 'husqvarna-tr262',
-            section: '#motocultivadores-section',
-            type: 'product'
-        },
-        
-        // Categorías generales
-        'motosierra': {
-            name: 'Motosierras Husqvarna',
-            page: 'motosierras.html',
-            section: '#hero-section',
+        'sopladora': {
+            name: 'Sopladoras Husqvarna',
+            element: 'productos',
+            coppelUrl: 'https://www.coppel.com/buscar?q=husqvarna+sopladora',
             type: 'category'
         },
-        'motosierras': {
-            name: 'Motosierras Husqvarna',
-            page: 'motosierras.html',
-            section: '#hero-section',
-            type: 'category'
+        'lc151': {
+            name: 'Husqvarna LC151',
+            element: 'productos',
+            coppelUrl: 'https://www.coppel.com/buscar?q=husqvarna+lc151',
+            type: 'product'
         },
-        'motocultivador': {
-            name: 'Motocultivadores Husqvarna',
-            page: 'motocultivadores.html',
-            section: '#hero-section',
-            type: 'category'
-        },
-        'motocultivadores': {
-            name: 'Motocultivadores Husqvarna',
-            page: 'motocultivadores.html',
-            section: '#hero-section',
+        'fumigadora': {
+            name: 'Fumigadoras Husqvarna',
+            element: 'productos',
+            coppelUrl: 'https://www.coppel.com/buscar?q=husqvarna+fumigadora',
             type: 'category'
         },
         'podadora': {
             name: 'Podadoras Husqvarna',
-            page: 'podadoras.html',
-            section: '#hero-section',
+            element: 'productos',
+            coppelUrl: 'https://www.coppel.com/buscar?q=husqvarna+podadora',
             type: 'category'
         },
-        'podadoras': {
-            name: 'Podadoras Husqvarna',
-            page: 'podadoras.html',
-            section: '#hero-section',
-            type: 'category'
-        },
-        
-        // Términos alternativos
-        'chainsaw': {
+        'motosierra': {
             name: 'Motosierras Husqvarna',
-            page: 'motosierras.html',
-            section: '#hero-section',
+            element: 'productos-motosierra',
+            coppelUrl: 'https://www.coppel.com/buscar?q=husqvarna+motosierra',
             type: 'category'
         },
-        'sierra': {
-            name: 'Motosierras Husqvarna',
-            page: 'motosierras.html',
-            section: '#hero-section',
+        'cesped': {
+            name: 'Equipos para Césped',
+            element: 'productos-cesped',
+            coppelUrl: 'https://www.coppel.com/buscar?q=husqvarna+cesped',
             type: 'category'
         },
-        'tiller': {
-            name: 'Motocultivadores Husqvarna',
-            page: 'motocultivadores.html',
-            section: '#hero-section',
+        'bomba': {
+            name: 'Bombas y Generadores',
+            element: 'productos-bombas',
+            coppelUrl: 'https://www.coppel.com/buscar?q=husqvarna+bomba',
+            type: 'category'
+        },
+        'generador': {
+            name: 'Bombas y Generadores',
+            element: 'productos-bombas',
+            coppelUrl: 'https://www.coppel.com/buscar?q=husqvarna+generador',
             type: 'category'
         }
     };
@@ -682,9 +553,9 @@ function performProductSearch(searchTerm) {
         }
     }
     
-    // If no exact match, show no results message
+    // If no exact match, show general search options
     if (!found) {
-        showNoResultsMessage(searchTerm);
+        showGeneralSearchResults(searchTerm);
     }
     
     // Clear search input
@@ -692,50 +563,21 @@ function performProductSearch(searchTerm) {
     hideSearchSuggestions();
 }
 
-// Navigate directly to search results in our website
+// Show search results with options
 function showSearchResults(searchTerm, result) {
-    showNotification(`Encontré: ${result.name} - Navegando...`, 'success');
+    const message = `Encontré: "${result.name}"\n\n¿Qué quieres hacer?`;
     
-    // Check if we need to navigate to a different page
-    const currentPage = window.location.pathname.split('/').pop();
-    
-    if (result.page && currentPage !== result.page) {
-        // Navigate to the specific page
-        if (result.elementId) {
-            // Add hash for specific element
-            window.location.href = `${result.page}#${result.elementId}`;
-        } else {
-            // Just navigate to page
-            window.location.href = result.page;
+    if (confirm(message + '\n\nOK = Ver en nuestra página\nCancelar = Buscar en Coppel.com')) {
+        // Navigate to our page section
+        const targetElement = document.getElementById(result.element);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+            showNotification(`Mostrando: ${result.name}`, 'success');
         }
     } else {
-        // Same page - scroll to element
-        if (result.elementId) {
-            const targetElement = document.getElementById(result.elementId);
-            if (targetElement) {
-                targetElement.scrollIntoView({ 
-                    behavior: 'smooth',
-                    block: 'center'
-                });
-                // Highlight the product briefly
-                targetElement.style.backgroundColor = '#fff3cd';
-                setTimeout(() => {
-                    targetElement.style.backgroundColor = '';
-                }, 2000);
-            } else if (result.section) {
-                const sectionElement = document.querySelector(result.section);
-                if (sectionElement) {
-                    sectionElement.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-        } else if (result.section) {
-            const sectionElement = document.querySelector(result.section);
-            if (sectionElement) {
-                sectionElement.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-        
-        showNotification(`Mostrando: ${result.name}`, 'success');
+        // Open Coppel search
+        window.open(result.coppelUrl, '_blank');
+        showNotification(`Buscando "${searchTerm}" en Coppel.com`, 'info');
     }
 }
 
