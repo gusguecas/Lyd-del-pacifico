@@ -258,6 +258,12 @@ h2 {
     transform: translateY(0) !important;
 }
 
+.nav-dropdown.active .dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+}
+
 .dropdown-menu li {
     margin: 0 !important;
 }
@@ -674,5 +680,28 @@ h2 {
             <p style="margin-top: 1rem; opacity: 0.8;">Distribuidor oficial de equipos Husqvarna en México</p>
         </div>
     </footer>
+
+    <script>
+        // Dropdown toggle on click
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownToggle = document.querySelector('.dropdown-toggle');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+            const navDropdown = document.querySelector('.nav-dropdown');
+
+            if (dropdownToggle) {
+                dropdownToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    navDropdown.classList.toggle('active');
+                });
+
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!navDropdown.contains(e.target)) {
+                        navDropdown.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>

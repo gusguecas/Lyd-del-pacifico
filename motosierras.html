@@ -277,6 +277,12 @@ a:hover {
     transform: translateY(0) !important;
 }
 
+.nav-dropdown.active .dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+}
+
 .dropdown-menu li {
     margin: 0 !important;
 }
@@ -5152,15 +5158,34 @@ function initializeVariantSelector() {
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🌱 LYD - Motosierras Husqvarna loaded');
-    
+
     // Initialize all functionality
     initializeProductTabs();
     initializeImageGallery();
-    
+
     // Initialize variant selectors with a small delay
     setTimeout(() => {
         initializeVariantSelector();
     }, 100);
+
+    // Dropdown toggle on click
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    const navDropdown = document.querySelector('.nav-dropdown');
+
+    if (dropdownToggle) {
+        dropdownToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            navDropdown.classList.toggle('active');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navDropdown.contains(e.target)) {
+                navDropdown.classList.remove('active');
+            }
+        });
+    }
 });
 </script>
 </body>
