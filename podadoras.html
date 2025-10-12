@@ -1285,6 +1285,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (dropdownToggle) {
         dropdownToggle.addEventListener('click', function(e) {
             e.preventDefault();
+            e.stopPropagation();
             navDropdown.classList.toggle('active');
         });
 

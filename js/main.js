@@ -63,6 +63,7 @@ function initializeDropdownMenu() {
         // Handle dropdown toggle on click (works on all screen sizes)
         dropdownToggle.addEventListener('click', function(e) {
             e.preventDefault();
+            e.stopPropagation();
             dropdown.classList.toggle('active');
         });
 

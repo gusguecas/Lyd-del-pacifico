@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Dropdown</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; padding: 20px; }
+
+        .nav-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-toggle {
+            background: #1e3a5f;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .dropdown-toggle:hover {
+            background: #ff6600;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 280px;
+            border-radius: 8px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            list-style: none;
+            padding: 10px 0;
+            margin-top: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .nav-dropdown:hover .dropdown-menu,
+        .nav-dropdown.active .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            margin: 0;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 20px;
+            color: #1e3a5f;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .dropdown-menu a:hover {
+            background: #f8f9fa;
+            border-left-color: #ff6600;
+            color: #ff6600;
+            padding-left: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test de Dropdown</h1>
+    <p>Haz clic en "Productos" para abrir el menú:</p>
+    <br>
+
+    <div class="nav-dropdown">
+        <button class="dropdown-toggle">
+            Productos <i class="fas fa-chevron-down"></i>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="motocultivadores.html"><i class="fas fa-seedling"></i> Motocultivadores</a></li>
+            <li><a href="motosierras.html"><i class="fas fa-cut"></i> Motosierras</a></li>
+            <li><a href="podadoras.html"><i class="fas fa-leaf"></i> Podadoras</a></li>
+            <li><a href="sopladoras.html"><i class="fas fa-wind"></i> Sopladoras</a></li>
+            <li><a href="generadores.html"><i class="fas fa-bolt"></i> Generadores</a></li>
+        </ul>
+    </div>
+
+    <p style="margin-top: 200px;">Haz clic aquí abajo para cerrar el dropdown</p>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownToggle = document.querySelector('.dropdown-toggle');
+            const navDropdown = document.querySelector('.nav-dropdown');
+
+            if (dropdownToggle) {
+                dropdownToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    navDropdown.classList.toggle('active');
+                    console.log('Dropdown toggle clicked, active:', navDropdown.classList.contains('active'));
+                });
+
+                document.addEventListener('click', function(e) {
+                    if (!navDropdown.contains(e.target)) {
+                        navDropdown.classList.remove('active');
+                        console.log('Clicked outside, closing dropdown');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
