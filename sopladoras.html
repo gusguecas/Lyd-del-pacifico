@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sopladoras y Desbrozadoras Husqvarna - LYD Logística y Distribución Nacional</title>
-    <meta name="description" content="Sopladoras y Desbrozadoras Husqvarna profesionales. Equipos para limpieza y mantenimiento de jardines. Distribución nacional por LYD - Disponibles en Coppel.com">
-    
+    <title>Sopladoras Husqvarna - LYD Logística y Distribución Nacional</title>
+    <meta name="description" content="Sopladoras Husqvarna profesionales. Equipos para limpieza y mantenimiento de jardines. Distribución nacional por LYD - Disponibles en Coppel.com">
+
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Embedded CSS to ensure proper loading -->
     <style>
 /* Husqvarna Website Styles - Matching Brand Identity */
@@ -30,15 +30,15 @@
     --text-gray: #666666;
     --success-green: #28a745;
     --whatsapp-green: #25d366;
-    
+
     /* Coppel Brand Colors - Oficiales */
     --coppel-blue: #1e4c8c;        /* Medium Blue más cercano al original */
     --coppel-yellow: #F0D224;      /* Yellow R240, G210, B36 */
     --coppel-white: #FFFFFF;       /* White R255, G255, B255 */
-    
+
     /* Coppel Typography */
     --coppel-font: 'Sharp Sans No 2', 'Inter', 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
-    
+
     /* Typography */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-weight-light: 300;
@@ -46,7 +46,7 @@
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
-    
+
     /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
@@ -54,7 +54,7 @@
     --spacing-lg: 2rem;
     --spacing-xl: 3rem;
     --spacing-xxl: 4rem;
-    
+
     /* Borders */
     --border-radius: 8px;
     --border-radius-lg: 12px;
@@ -399,6 +399,39 @@ a:hover {
     background-color: #1faa59 !important;
 }
 
+/* Breadcrumb Section */
+.breadcrumb {
+    background-color: var(--light-gray) !important;
+    padding: var(--spacing-md) 0 !important;
+}
+
+.breadcrumb-nav {
+    display: flex !important;
+    align-items: center !important;
+    gap: var(--spacing-sm) !important;
+    font-size: 0.9rem !important;
+    margin-bottom: var(--spacing-lg) !important;
+}
+
+.breadcrumb-nav a {
+    color: var(--primary-navy) !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease !important;
+}
+
+.breadcrumb-nav a:hover {
+    color: var(--primary-orange) !important;
+}
+
+.breadcrumb-nav i {
+    color: var(--text-gray) !important;
+    font-size: 0.7rem !important;
+}
+
+.breadcrumb-nav span {
+    color: var(--text-gray) !important;
+}
+
 /* Category Pages Styles */
 .category-hero {
     padding: var(--spacing-xl) 0 !important;
@@ -597,40 +630,416 @@ a:hover {
     box-shadow: 0 12px 24px rgba(30, 58, 95, 0.3) !important;
 }
 
-/* Products Placeholder */
-.product-placeholder {
+/* Products Navigation */
+.products-navigation {
+    padding: var(--spacing-xl) 0 !important;
     background-color: var(--white) !important;
-    border-radius: var(--border-radius-lg) !important;
-    padding: var(--spacing-xxl) !important;
     text-align: center !important;
-    box-shadow: var(--box-shadow) !important;
-    max-width: 500px !important;
-    margin: 0 auto !important;
 }
 
-.placeholder-content i {
-    font-size: 4rem !important;
-    color: var(--primary-orange) !important;
-    margin-bottom: var(--spacing-lg) !important;
-}
-
-.placeholder-content h3 {
-    font-size: 1.8rem !important;
+.products-navigation h2 {
+    font-size: 2.5rem !important;
     color: var(--primary-navy) !important;
-    margin-bottom: var(--spacing-md) !important;
+    margin-bottom: var(--spacing-sm) !important;
 }
 
-.placeholder-content p {
-    font-size: 1.1rem !important;
+.section-subtitle {
+    font-size: 1.2rem !important;
     color: var(--text-gray) !important;
     margin-bottom: var(--spacing-xl) !important;
 }
 
-.placeholder-actions {
+.scroll-indicator {
     display: flex !important;
-    justify-content: center !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: var(--spacing-sm) !important;
+    color: var(--primary-orange) !important;
+    font-weight: var(--font-weight-medium) !important;
+    animation: bounce 2s infinite !important;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0) !important;
+    }
+    50% {
+        transform: translateY(10px) !important;
+    }
+}
+
+.scroll-indicator i {
+    font-size: 2rem !important;
+}
+
+/* Product Page Styles */
+.product-page {
+    padding: var(--spacing-xl) 0 !important;
+    background-color: var(--light-gray) !important;
+}
+
+/* Standard Product Layout */
+.standard-product-layout {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto 1fr !important;
+    gap: var(--spacing-lg) !important;
+    margin-bottom: var(--spacing-xxl) !important;
+    background: var(--white) !important;
+    border-radius: var(--border-radius-lg) !important;
+    padding: var(--spacing-xl) !important;
+    box-shadow: var(--box-shadow) !important;
+    min-height: 700px !important;
+}
+
+/* Área del contenido (imagen + info) */
+.product-content-area {
+    display: grid !important;
+    grid-template-columns: 60% 40% !important;
+    gap: var(--spacing-xl) !important;
+}
+
+/* Título del Producto - Ancho Completo y Vistoso */
+.product-title-full-width {
+    grid-column: 1 !important;
+    background: linear-gradient(135deg, var(--primary-navy) 0%, #2a4a6e 100%) !important;
+    color: var(--white) !important;
+    padding: var(--spacing-xl) var(--spacing-lg) !important;
+    border-radius: var(--border-radius-lg) !important;
+    text-align: center !important;
+    box-shadow: var(--box-shadow-lg) !important;
+    margin-bottom: var(--spacing-lg) !important;
+    border: 3px solid var(--primary-orange) !important;
+}
+
+.product-title-full-width h1 {
+    font-size: 2.5rem !important;
+    font-weight: var(--font-weight-bold) !important;
+    color: var(--white) !important;
+    margin: 0 !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Columna Izquierda */
+.product-left-column {
+    display: flex !important;
+    flex-direction: column !important;
     gap: var(--spacing-md) !important;
-    flex-wrap: wrap !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Product Photo Container */
+.product-photo {
+    background: var(--light-gray) !important;
+    border-radius: var(--border-radius-lg) !important;
+    padding: var(--spacing-lg) !important;
+    box-shadow: var(--box-shadow) !important;
+    min-height: 500px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+/* Product Gallery */
+.product-gallery {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--spacing-md) !important;
+}
+
+.main-image {
+    width: 100% !important;
+    height: 450px !important;
+    background: var(--white) !important;
+    border-radius: var(--border-radius) !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.product-image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    display: none !important;
+    transition: transform 0.3s ease !important;
+}
+
+.product-image.active {
+    display: block !important;
+}
+
+.product-image:hover {
+    transform: scale(1.05) !important;
+}
+
+/* Image Thumbnails */
+.image-thumbnails {
+    display: grid !important;
+    grid-template-columns: repeat(6, 1fr) !important;
+    gap: var(--spacing-sm) !important;
+}
+
+.thumbnail {
+    width: 100% !important;
+    height: 70px !important;
+    object-fit: cover !important;
+    border-radius: var(--border-radius) !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    border: 2px solid transparent !important;
+    background: var(--white) !important;
+}
+
+.thumbnail:hover {
+    border-color: var(--primary-orange) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: var(--box-shadow) !important;
+}
+
+.thumbnail.active {
+    border-color: var(--primary-orange) !important;
+    box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.2) !important;
+}
+
+/* Columna Derecha */
+.product-right-column {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+}
+
+/* Contenedor de Tabs */
+.product-tabs {
+    background: var(--white) !important;
+    border-radius: var(--border-radius) !important;
+    border: 1px solid #ddd !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Navegación de Tabs */
+.tabs-navigation {
+    display: flex !important;
+    background: var(--light-gray) !important;
+    border-bottom: 1px solid #ddd !important;
+    border-radius: var(--border-radius) var(--border-radius) 0 0 !important;
+}
+
+.tab-nav-btn {
+    flex: 1 !important;
+    padding: var(--spacing-md) var(--spacing-lg) !important;
+    background: transparent !important;
+    border: none !important;
+    font-size: 0.95rem !important;
+    font-weight: var(--font-weight-medium) !important;
+    color: var(--text-gray) !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    border-bottom: 3px solid transparent !important;
+}
+
+.tab-nav-btn.active {
+    background: var(--white) !important;
+    color: var(--primary-navy) !important;
+    border-bottom-color: var(--primary-orange) !important;
+}
+
+.tab-nav-btn:hover:not(.active) {
+    background: rgba(255, 102, 0, 0.1) !important;
+    color: var(--primary-orange) !important;
+}
+
+/* Contenedor de Contenido de Tabs */
+.tabs-container {
+    flex: 1 !important;
+    position: relative !important;
+}
+
+.tab-content-panel {
+    display: none !important;
+    padding: var(--spacing-xl) !important;
+    height: 100% !important;
+    overflow-y: auto !important;
+}
+
+.tab-content-panel.active {
+    display: block !important;
+}
+
+/* Sección de Descripción */
+.description-section h3 {
+    color: var(--primary-navy) !important;
+    font-size: 1.3rem !important;
+    margin-bottom: var(--spacing-md) !important;
+    font-weight: var(--font-weight-semibold) !important;
+    border-bottom: 2px solid var(--primary-orange) !important;
+    padding-bottom: var(--spacing-xs) !important;
+}
+
+.description-section h4 {
+    color: var(--primary-navy) !important;
+    font-size: 1.1rem !important;
+    margin-top: var(--spacing-lg) !important;
+    margin-bottom: var(--spacing-sm) !important;
+}
+
+.description-section p {
+    line-height: 1.7 !important;
+    color: var(--dark-gray) !important;
+    font-size: 1rem !important;
+}
+
+.description-section ul {
+    list-style: none !important;
+    padding-left: 0 !important;
+}
+
+.description-section ul li {
+    padding: var(--spacing-xs) 0 !important;
+    padding-left: var(--spacing-lg) !important;
+    position: relative !important;
+}
+
+.description-section ul li:before {
+    content: "✓" !important;
+    color: var(--primary-orange) !important;
+    font-weight: bold !important;
+    position: absolute !important;
+    left: 0 !important;
+}
+
+/* Especificaciones */
+.specs-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-md) !important;
+}
+
+.spec-item {
+    padding: var(--spacing-sm) !important;
+    background: var(--light-gray) !important;
+    border-radius: var(--border-radius) !important;
+    border-left: 3px solid var(--primary-orange) !important;
+}
+
+.spec-item h4 {
+    color: var(--primary-navy) !important;
+    font-size: 1.1rem !important;
+    margin-bottom: var(--spacing-sm) !important;
+    font-weight: var(--font-weight-semibold) !important;
+}
+
+.spec-item p {
+    color: var(--dark-gray) !important;
+    font-size: 0.95rem !important;
+}
+
+/* Includes List */
+.includes-list {
+    list-style: none !important;
+    padding: 0 !important;
+}
+
+.includes-list li {
+    padding: var(--spacing-sm) 0 !important;
+    border-bottom: 1px solid var(--light-gray) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: var(--spacing-sm) !important;
+}
+
+.includes-list li:before {
+    content: "✓" !important;
+    color: var(--success-green) !important;
+    font-weight: bold !important;
+    font-size: 1.2rem !important;
+}
+
+/* Husqvarna Logo Sidebar */
+.husqvarna-logo-sidebar {
+    text-align: center !important;
+    padding: var(--spacing-md) !important;
+    margin-bottom: var(--spacing-lg) !important;
+    height: 500px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #f8f8f8 !important;
+    border-radius: var(--border-radius) !important;
+    border: 2px solid #e0e0e0 !important;
+}
+
+.husqvarna-logo-xl {
+    height: 90% !important;
+    width: auto !important;
+    max-width: 90% !important;
+    object-fit: contain !important;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1)) !important;
+    transition: transform 0.3s ease !important;
+}
+
+.husqvarna-logo-xl:hover {
+    transform: scale(1.03) !important;
+}
+
+/* Product Price Box */
+.product-price-box {
+    background: linear-gradient(135deg, var(--primary-navy) 0%, #2a4a6e 100%) !important;
+    padding: var(--spacing-lg) !important;
+    margin: var(--spacing-lg) 0 !important;
+    border-radius: var(--border-radius-lg) !important;
+    text-align: center !important;
+    box-shadow: 0 8px 25px rgba(30, 58, 95, 0.3) !important;
+    border: 3px solid var(--primary-orange) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.price-text {
+    font-family: 'Sharp Sans No 2', 'Inter', sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: var(--font-weight-medium) !important;
+    color: var(--white) !important;
+    margin-bottom: var(--spacing-xs) !important;
+}
+
+.price-display {
+    margin: var(--spacing-sm) 0 !important;
+}
+
+.price-amount {
+    font-size: 3.75rem !important;
+    font-weight: var(--font-weight-bold) !important;
+    color: var(--primary-orange) !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) !important;
+    margin: var(--spacing-xs) 0 !important;
+    line-height: 1.1 !important;
+}
+
+.price-currency {
+    font-size: 1.1rem !important;
+    font-weight: var(--font-weight-medium) !important;
+    color: var(--white) !important;
+}
+
+.price-note {
+    font-size: 0.8rem !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    margin-top: var(--spacing-xs) !important;
+    font-style: italic !important;
+}
+
+/* Purchase and WhatsApp Buttons */
+.purchase-button,
+.whatsapp-button {
+    margin-bottom: var(--spacing-md) !important;
 }
 
 /* Footer */
@@ -647,7 +1056,7 @@ a:hover {
     margin-bottom: var(--spacing-xl) !important;
 }
 
-.footer-section h4 {
+.footer-section h3 {
     color: var(--primary-orange) !important;
     margin-bottom: var(--spacing-md) !important;
 }
@@ -666,6 +1075,45 @@ a:hover {
 }
 
 .footer-section ul li a:hover {
+    color: var(--primary-orange) !important;
+}
+
+.social-links {
+    display: flex !important;
+    gap: var(--spacing-md) !important;
+    margin-top: var(--spacing-md) !important;
+}
+
+.social-link {
+    width: 40px !important;
+    height: 40px !important;
+    background-color: var(--primary-orange) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: var(--white) !important;
+    transition: all 0.3s ease !important;
+}
+
+.social-link:hover {
+    background-color: var(--primary-navy) !important;
+    transform: translateY(-3px) !important;
+}
+
+.contact-info {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--spacing-sm) !important;
+}
+
+.contact-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: var(--spacing-sm) !important;
+}
+
+.contact-item i {
     color: var(--primary-orange) !important;
 }
 
@@ -695,6 +1143,24 @@ a:hover {
     text-align: center !important;
 }
 
+.footer-bottom-content {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: var(--spacing-md) !important;
+}
+
+.footer-links {
+    display: flex !important;
+    gap: var(--spacing-lg) !important;
+}
+
+.footer-links a {
+    color: var(--white) !important;
+    font-size: 0.9rem !important;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .header-content {
@@ -705,81 +1171,134 @@ a:hover {
         justify-items: center !important;
         min-height: 110px !important;
     }
-    
+
     .logo {
         justify-self: center !important;
     }
-    
+
     .nav {
         justify-self: center !important;
     }
-    
+
     .header-right {
         justify-self: center !important;
         flex-direction: row !important;
         gap: var(--spacing-md) !important;
         align-items: center !important;
     }
-    
+
     .search-container {
         margin-top: 0 !important;
     }
-    
+
     .search-input {
         width: 140px !important;
     }
-    
+
     .nav-list {
         flex-wrap: wrap !important;
         justify-content: center !important;
     }
-    
+
     .category-header h1 {
         font-size: 2.5rem !important;
     }
-    
+
     .category-subtitle {
         font-size: 1.2rem !important;
     }
-    
+
     .category-text {
         font-size: 1rem !important;
         padding: 0 var(--spacing-md) !important;
     }
-    
+
     .features-grid-compact {
         grid-template-columns: 1fr !important;
         gap: var(--spacing-md) !important;
     }
-    
+
     .compact-features {
         padding: var(--spacing-lg) !important;
     }
-    
+
     .compact-features h3 {
         font-size: 1.5rem !important;
     }
-    
+
     .showcase-cta {
         padding: var(--spacing-lg) !important;
     }
-    
+
     .cta-content h3 {
         font-size: 1.8rem !important;
     }
-    
+
     .cta-content p {
         font-size: 1rem !important;
     }
-    
+
     .cta-buttons {
         flex-direction: column !important;
         align-items: center !important;
     }
-    
+
     .cta-btn {
         width: 100% !important;
         max-width: 280px !important;
+    }
+
+    .standard-product-layout {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto auto !important;
+        gap: var(--spacing-lg) !important;
+        padding: var(--spacing-md) !important;
+        min-height: auto !important;
+    }
+
+    .product-content-area {
+        grid-template-columns: 1fr !important;
+        gap: var(--spacing-lg) !important;
+    }
+
+    .product-title-full-width h1 {
+        font-size: 1.8rem !important;
+    }
+
+    .product-left-column {
+        order: 1 !important;
+    }
+
+    .product-right-column {
+        order: 2 !important;
+    }
+
+    .main-image {
+        height: 350px !important;
+    }
+
+    .product-photo {
+        min-height: 400px !important;
+    }
+
+    .thumbnail {
+        width: 60px !important;
+        height: 45px !important;
+    }
+
+    .tabs-navigation {
+        flex-direction: column !important;
+    }
+
+    .tab-nav-btn {
+        text-align: center !important;
+        border-bottom: none !important;
+        border-right: 3px solid transparent !important;
+    }
+
+    .tab-nav-btn.active {
+        border-right-color: var(--primary-orange) !important;
+        border-bottom-color: transparent !important;
     }
 }
 
@@ -787,62 +1306,62 @@ a:hover {
     .container {
         padding: 0 var(--spacing-sm) !important;
     }
-    
+
     .category-info-new {
         padding: var(--spacing-lg) 0 !important;
     }
-    
+
     .category-header h1 {
         font-size: 2rem !important;
     }
-    
+
     .compact-features {
         padding: var(--spacing-md) !important;
     }
-    
+
     .compact-feature {
         padding: var(--spacing-sm) !important;
     }
-    
+
     .feature-icon-small {
         width: 40px !important;
         height: 40px !important;
     }
-    
+
     .feature-icon-small i {
         font-size: 1rem !important;
     }
-    
+
     .feature-text strong {
         font-size: 1rem !important;
     }
-    
+
     .feature-text span {
         font-size: 0.85rem !important;
     }
-    
+
     .lyd-official-logo {
         height: 80px !important;
         max-width: 400px !important;
     }
-    
+
     .header-right {
         flex-direction: column !important;
         gap: var(--spacing-xs) !important;
         align-items: center !important;
     }
-    
+
     .search-input {
         width: 120px !important;
         font-size: 0.7rem !important;
     }
-    
-    .placeholder-content {
-        padding: var(--spacing-lg) !important;
+
+    .image-thumbnails {
+        grid-template-columns: repeat(3, 1fr) !important;
     }
-    
-    .placeholder-content i {
-        font-size: 3rem !important;
+
+    .price-amount {
+        font-size: 2.5rem !important;
     }
 }
 </style>
@@ -858,7 +1377,7 @@ a:hover {
                         <img src="https://i.ibb.co/p60cXvdb/Captura-de-pantalla-2025-09-16-a-la-s-6-41-38-p-m.png" alt="LYD - Logística y Distribución Nacional" class="lyd-official-logo">
                     </div>
                 </div>
-                
+
                 <!-- Navegación central -->
                 <nav class="nav">
                     <ul class="nav-list">
@@ -872,8 +1391,10 @@ a:hover {
                                 <li><a href="motocultivadores.html"><i class="fas fa-seedling"></i> Motocultivadores</a></li>
                                 <li><a href="motosierras.html"><i class="fas fa-cut"></i> Motosierras y Recortadoras</a></li>
                                 <li><a href="podadoras.html"><i class="fas fa-leaf"></i> Podadoras</a></li>
-                                <li><a href="sopladoras.html" class="active"><i class="fas fa-wind"></i> Sopladoras y Desbrozadoras</a></li>
-                                <li><a href="generadores.html"><i class="fas fa-bolt"></i> Generadores y Motores</a></li>
+                                <li><a href="sopladoras.html" class="active"><i class="fas fa-wind"></i> Sopladoras</a></li>
+                                <li><a href="desbrozadoras.html"><i class="fas fa-cut"></i> Desbrozadoras</a></li>
+                                <li><a href="generadores.html"><i class="fas fa-plug"></i> Generadores</a></li>
+                                <li><a href="motores.html"><i class="fas fa-cog"></i> Motores</a></li>
                                 <li><a href="aspersoras.html"><i class="fas fa-spray-can"></i> Aspersoras</a></li>
                                 <li><a href="motobombas.html"><i class="fas fa-water"></i> Motobombas</a></li>
                                 <li><a href="#equipos"><i class="fas fa-hard-hat"></i> Equipos y Consumibles</a></li>
@@ -900,872 +1421,797 @@ a:hover {
         </div>
     </header>
 
-    <!-- Banner Principal -->
-    <section class="product-hero">
+    <!-- Category Hero Banner -->
+    <section class="category-hero">
         <div class="container">
-            <div class="hero-content">
-                <img src="images/sopladoras-banner.jpg" alt="Sopladoras y Desbrozadoras Husqvarna" class="hero-image">
+            <img src="images/sopladoras-banner.jpg" alt="Sopladoras Husqvarna" class="category-banner-image">
+        </div>
+    </section>
+
+    <!-- Category Info Section -->
+    <section class="category-info-new">
+        <div class="container">
+            <div class="category-header">
+                <h1>Sopladoras Husqvarna Profesionales</h1>
+                <p class="category-subtitle">Limpieza Eficiente de Áreas Verdes</p>
+                <p class="category-text">Las sopladoras Husqvarna son herramientas profesionales diseñadas para la limpieza eficiente de áreas verdes, jardines y espacios exteriores. Con motores potentes de 2 y 4 tiempos, ofrecen velocidad de aire superior para eliminar hojas, recortes de césped y desechos de manera rápida y efectiva.</p>
+            </div>
+
+            <div class="professional-showcase">
+                <!-- Características Compactas -->
+                <div class="compact-features">
+                    <h3>Características Principales</h3>
+                    <div class="features-grid-compact">
+                        <div class="compact-feature">
+                            <div class="feature-icon-small">
+                                <i class="fas fa-wind"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Potencia Superior</strong>
+                                <span>Motores de 2 y 4 tiempos con alta velocidad de aire</span>
+                            </div>
+                        </div>
+
+                        <div class="compact-feature">
+                            <div class="feature-icon-small">
+                                <i class="fas fa-feather-alt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Diseño Ergonómico</strong>
+                                <span>Ligeros y balanceados para trabajo prolongado sin fatiga</span>
+                            </div>
+                        </div>
+
+                        <div class="compact-feature">
+                            <div class="feature-icon-small">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Versatilidad</strong>
+                                <span>Desde uso doméstico hasta aplicaciones comerciales intensivas</span>
+                            </div>
+                        </div>
+
+                        <div class="compact-feature">
+                            <div class="feature-icon-small">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Tecnología Avanzada</strong>
+                                <span>Sistemas anti-vibración y arranque fácil en todos los modelos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="showcase-cta">
+                    <div class="cta-content">
+                        <h3>¿Necesitas una sopladora Husqvarna?</h3>
+                        <p>Explora nuestros modelos de sopladoras disponibles y encuentra el equipo perfecto para mantener limpias tus áreas verdes</p>
+                        <div class="cta-buttons">
+                            <a href="#soplador-125b-manual" class="cta-btn primary">Ver Sopladoras</a>
+                            
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Navegación de productos -->
-    <section class="product-nav">
+    <!-- Products Navigation -->
+    <section class="products-navigation">
         <div class="container">
-            <div class="breadcrumb">
-                <a href="index.html">Inicio</a> > <span>Sopladoras y Desbrozadoras</span>
-            </div>
-            <div class="product-info">
-                <h1>Sopladoras y Desbrozadoras Husqvarna</h1>
-                <p>Equipos profesionales para limpieza y mantenimiento de jardines</p>
-                <div class="product-count">Equipos potentes para limpieza de áreas verdes</div>
+            <h2>Nuestras Sopladoras</h2>
+            <p class="section-subtitle">Desliza hacia abajo para ver cada modelo en detalle</p>
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+                <span>Scroll para ver productos</span>
             </div>
         </div>
     </section>
 
-    <!-- Contenido Principal -->
-    <main class="main-content">
+    <!-- Producto 1: Soplador Husqvarna 125B Manual -->
+    <section class="product-page" id="soplador-125b-manual">
         <div class="container">
-            <!-- Sección Introducción de Sopladoras y Desbrozadoras -->
-            <section class="mower-intro" style="padding: 60px 0; background: linear-gradient(135deg, #253967 0%, #1e2c5a 100%); color: white;">
-                <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-                    <div class="intro-content" style="text-align: center;">
-                        <h2 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 20px; color: white;">Sopladoras y Desbrozadoras Husqvarna</h2>
-                        <p style="font-size: 1.2rem; color: #e0e7ff; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">Equipos profesionales para limpieza y mantenimiento de jardines</p>
-                        <p style="color: #cbd5e1; max-width: 900px; margin: 0 auto; line-height: 1.6;">Las sopladoras y desbrozadoras Husqvarna son herramientas esenciales para el mantenimiento profesional de jardines y áreas verdes. Con motores potentes de 2 y 4 tiempos, sistemas de aire de alto rendimiento y tecnología X-Torq que reduce emisiones, estos equipos garantizan una limpieza eficiente y un trabajo profesional en cualquier terreno.</p>
+            <!-- Breadcrumb Navigation -->
+            <nav class="breadcrumb-nav">
+                <a href="index.html">Inicio</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="sopladoras.html">Sopladoras</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Soplador Husqvarna 125B Manual</span>
+            </nav>
+
+            <!-- Layout Estándar de Producto -->
+            <div class="standard-product-layout">
+                <!-- Título del Producto - Ancho Completo -->
+                <div class="product-title-full-width">
+                    <h1>Soplador Husqvarna 125B Manual</h1>
+                </div>
+
+                <!-- Área de Contenido: Imagen + Info -->
+                <div class="product-content-area">
+                    <!-- Columna Izquierda: Solo Foto -->
+                    <div class="product-left-column">
+                        <!-- Fotos del Producto -->
+                        <div class="product-photo">
+                            <!-- Galería de Producto con Zoom -->
+                            <div class="product-gallery">
+                                <div class="main-image">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Soplador 125B Manual Principal" class="product-image active" id="125bmanual-image1">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Soplador 125B Manual Motor" class="product-image" id="125bmanual-image2">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Soplador 125B Manual Sistema" class="product-image" id="125bmanual-image3">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Soplador 125B Manual Detalles" class="product-image" id="125bmanual-image4">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Soplador 125B Manual Accesorios" class="product-image" id="125bmanual-image5">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Soplador 125B Manual Manual" class="product-image" id="125bmanual-image6">
+                                </div>
+                                <div class="image-thumbnails">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Principal" class="thumbnail active" data-target="125bmanual-image1">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Motor" class="thumbnail" data-target="125bmanual-image2">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Sistema" class="thumbnail" data-target="125bmanual-image3">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Detalles" class="thumbnail" data-target="125bmanual-image4">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Accesorios" class="thumbnail" data-target="125bmanual-image5">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Manual" class="thumbnail" data-target="125bmanual-image6">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tabs de Información debajo de la foto -->
+                        <div class="product-tabs">
+                            <div class="tabs-navigation">
+                                <button class="tab-nav-btn active" data-tab="descripcion-125bmanual">Descripción</button>
+                                <button class="tab-nav-btn" data-tab="especificaciones-125bmanual">Especificaciones</button>
+                                <button class="tab-nav-btn" data-tab="incluye-125bmanual">Qué Incluye</button>
+                            </div>
+
+                            <div class="tabs-container">
+                                <!-- Tab: Descripción -->
+                                <div class="tab-content-panel active" id="descripcion-125bmanual">
+                                    <div class="description-section">
+                                        <h3>Descripción del Producto</h3>
+                                        <p>El Soplador Husqvarna 125B Manual es un equipo liviano y versátil equipado con motor de 28cc de 2 tiempos. Perfecto para uso doméstico, ofrece una velocidad de aire de 170 mph ideal para limpieza de hojas y residuos en jardines y patios. Su diseño compacto y bajo peso facilita su manejo durante períodos prolongados.</p>
+
+                                        <h4>Características Principales</h4>
+                                        <ul>
+                                            <li>Motor de 28cc de 2 tiempos para alto rendimiento</li>
+                                            <li>Velocidad de aire de 170 mph</li>
+                                            <li>Liviano con solo 4.3 kg de peso</li>
+                                            <li>Sistema de arranque fácil</li>
+                                            <li>Bajo nivel de ruido</li>
+                                            <li>Tubo de soplado desmontable</li>
+                                            <li>Bajo consumo de combustible</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Tab: Especificaciones -->
+                                <div class="tab-content-panel" id="especificaciones-125bmanual">
+                                    <h3>Especificaciones Técnicas</h3>
+                                    <div class="specs-grid">
+                                        <div class="spec-item">
+                                            <h4>Motor</h4>
+                                            <p>28cc, 2 tiempos</p>
+                                        </div>
+                                        <div class="spec-item">
+                                            <h4>Velocidad de aire</h4>
+                                            <p>170 mph</p>
+                                        </div>
+                                        <div class="spec-item">
+                                            <h4>Peso</h4>
+                                            <p>4.3 kg</p>
+                                        </div>
+                                        <div class="spec-item">
+                                            <h4>Tipo</h4>
+                                            <p>Manual, portátil</p>
+                                        </div>
+                                        <div class="spec-item">
+                                            <h4>Uso recomendado</h4>
+                                            <p>Doméstico</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tab: Qué Incluye -->
+                                <div class="tab-content-panel" id="incluye-125bmanual">
+                                    <h3>Qué Incluye</h3>
+                                    <ul class="includes-list">
+                                        <li>Soplador Husqvarna 125B Manual completo</li>
+                                        <li>Tubo de soplado desmontable</li>
+                                        <li>Manual de usuario en español</li>
+                                        <li>Certificado de garantía</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna Derecha: Logo + Precio + Botones -->
+                    <div class="product-right-column">
+                        <!-- Logo de Husqvarna MÁS GRANDE (500px height box) -->
+                        <div class="husqvarna-logo-sidebar">
+                            <img src="images/husqvarna-logo-hd.png" alt="Husqvarna" class="husqvarna-logo-xl">
+                        </div>
+
+                        <!-- Precio del Producto -->
+                        <div class="product-price-box">
+                            <p class="price-text">Precio de Venta:</p>
+                            <div class="price-display">
+                                <span class="price-amount">$3,499</span>
+                                <span class="price-currency">MXN</span>
+                            </div>
+                            <p class="price-note">*Precio sujeto a cambios sin previo aviso</p>
+                        </div>
+
+                        <!-- Botón de Compra Coppel -->
+                        <div class="purchase-button">
+                            <div onclick="window.open('https://www.coppel.com', '_blank')"
+                                 style="display: flex !important; align-items: center !important; justify-content: center !important; width: 100% !important; padding: 20px 30px !important; background-color: #05298E !important; border-radius: 10px !important; cursor: pointer !important; min-height: 75px !important; color: #FFFFFF !important; font-family: 'Sharp Sans No 2', sans-serif !important; font-weight: bold !important; transition: all 0.3s ease !important; box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1) !important;">
+                                <div style="color: #FFFFFF !important; position: relative !important;">
+                                    <div style="color: #FFFFFF !important; font-size: 1.125rem !important; text-align: left !important; margin-bottom: 8px !important; font-family: 'Sharp Sans No 2', sans-serif !important; font-weight: bold !important;">De venta en</div>
+                                    <div style="color: #FFFFFF !important; display: flex !important; align-items: center !important; justify-content: flex-start !important; position: relative !important;">
+                                        <div style="display: inline-flex !important; gap: 4px !important; align-items: center !important; margin-right: 12px !important;">
+                                            <div style="width: 22px !important; height: 22px !important; background: #F0D224 !important; border-radius: 50% !important; border: none !important;"></div>
+                                            <div style="width: 16px !important; height: 16px !important; background: #F0D224 !important; border-radius: 50% !important; border: none !important;"></div>
+                                            <div style="width: 16px !important; height: 16px !important; background: #F0D224 !important; border-radius: 50% !important; border: none !important;"></div>
+                                        </div>
+                                        <span style="color: #FFFFFF !important; font-weight: bold !important; font-size: 2.25rem !important; font-family: 'Sharp Sans No 2', sans-serif !important; margin-left: 6px !important;">Coppel</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Botón WhatsApp -->
+                        <div class="whatsapp-button">
+                            <div onclick="window.open('https://wa.me/526673298505?text=Hola, me interesa el Soplador Husqvarna 125B Manual - $3,499 MXN. Necesito información y/o cotización para venta directa. ¿Podrían ayudarme?', '_blank')"
+                                 style="display: flex !important; align-items: center !important; justify-content: center !important; width: 100% !important; padding: 20px 30px !important; background-color: #25D366 !important; border-radius: 10px !important; cursor: pointer !important; min-height: 75px !important; color: #FFFFFF !important; font-family: 'Sharp Sans No 2', sans-serif !important; font-weight: bold !important; transition: all 0.3s ease !important; box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1) !important; margin-top: 16px !important;">
+                                <div style="display: flex !important; align-items: center !important; gap: 12px !important; color: #FFFFFF !important;">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink: 0 !important;">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516"/>
+                                    </svg>
+                                    <div style="color: #FFFFFF !important; position: relative !important;">
+                                        <div style="color: #FFFFFF !important; font-size: 1.125rem !important; text-align: left !important; margin-bottom: 8px !important; font-family: 'Sharp Sans No 2', sans-serif !important; font-weight: bold !important;">Información y/o venta directa</div>
+                                        <div style="color: #FFFFFF !important; display: flex !important; align-items: center !important; justify-content: flex-start !important; position: relative !important;">
+                                            <span style="color: #FFFFFF !important; font-weight: bold !important; font-size: 2.25rem !important; font-family: 'Sharp Sans No 2', sans-serif !important;">WhatsApp</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </div> <!-- Cierre de standard-product-layout -->
+        </div> <!-- Cierre de container -->
+    </section>
 
-            <!-- Sección Características Principales -->
-            <section class="mower-features" style="padding: 80px 0; background: white;">
-                <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-                    <h2 style="text-align: center; font-size: 2.2rem; color: #253967; margin-bottom: 60px; font-weight: bold;">Características Principales</h2>
-                    
-                    <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;">
-                        <!-- Característica 1 -->
-                        <div class="feature-item" style="padding: 30px 20px; border-left: 4px solid #ff6600; background: #f8faff;">
-                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                <div style="width: 50px; height: 50px; background: #ff6600; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                                    <i class="fas fa-wind" style="color: white; font-size: 20px;"></i>
+    <!-- Producto 2: Soplador Husqvarna 570BTS Mochila -->
+    <section class="product-page" id="soplador-570bts">
+        <div class="container">
+            <!-- Breadcrumb Navigation -->
+            <nav class="breadcrumb-nav">
+                <a href="index.html">Inicio</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="sopladoras.html">Sopladoras</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Soplador Husqvarna 570BTS Mochila</span>
+            </nav>
+
+            <!-- Layout Estándar de Producto -->
+            <div class="standard-product-layout">
+                <!-- Título del Producto - Ancho Completo -->
+                <div class="product-title-full-width">
+                    <h1>Soplador Husqvarna 570BTS Mochila</h1>
+                </div>
+
+                <!-- Área de Contenido: Imagen + Info -->
+                <div class="product-content-area">
+                    <!-- Columna Izquierda: Solo Foto -->
+                    <div class="product-left-column">
+                        <!-- Fotos del Producto -->
+                        <div class="product-photo">
+                            <!-- Galería de Producto con Zoom -->
+                            <div class="product-gallery">
+                                <div class="main-image">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Soplador 570BTS Principal" class="product-image active" id="570bts-image1">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Soplador 570BTS Motor" class="product-image" id="570bts-image2">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Soplador 570BTS Sistema" class="product-image" id="570bts-image3">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Soplador 570BTS Detalles" class="product-image" id="570bts-image4">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Soplador 570BTS Accesorios" class="product-image" id="570bts-image5">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Soplador 570BTS Manual" class="product-image" id="570bts-image6">
                                 </div>
-                                <h3 style="color: #253967; font-size: 1.3rem; font-weight: bold; margin: 0;">Alta Potencia</h3>
+                                <div class="image-thumbnails">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Principal" class="thumbnail active" data-target="570bts-image1">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Motor" class="thumbnail" data-target="570bts-image2">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Sistema" class="thumbnail" data-target="570bts-image3">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Detalles" class="thumbnail" data-target="570bts-image4">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Accesorios" class="thumbnail" data-target="570bts-image5">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Manual" class="thumbnail" data-target="570bts-image6">
+                                </div>
                             </div>
-                            <p style="color: #666; line-height: 1.6; margin: 0;">Motores de 2 y 4 tiempos con gran potencia para limpieza profesional de hojas y residuos</p>
                         </div>
 
-                        <!-- Característica 2 -->
-                        <div class="feature-item" style="padding: 30px 20px; border-left: 4px solid #ff6600; background: #f8faff;">
-                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                <div style="width: 50px; height: 50px; background: #ff6600; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                                    <i class="fas fa-cut" style="color: white; font-size: 20px;"></i>
-                                </div>
-                                <h3 style="color: #253967; font-size: 1.3rem; font-weight: bold; margin: 0;">Desbrozado Eficiente</h3>
+                        <!-- Tabs de Información debajo de la foto -->
+                        <div class="product-tabs">
+                            <div class="tabs-navigation">
+                                <button class="tab-nav-btn active" data-tab="descripcion-570bts">Descripción</button>
+                                <button class="tab-nav-btn" data-tab="especificaciones-570bts">Especificaciones</button>
+                                <button class="tab-nav-btn" data-tab="incluye-570bts">Qué Incluye</button>
                             </div>
-                            <p style="color: #666; line-height: 1.6; margin: 0;">Cabezales de corte profesionales para maleza densa y vegetación difícil</p>
+
+                            <div class="tabs-container">
+                                <!-- Tab: Descripción -->
+                                <div class="tab-content-panel active" id="descripcion-570bts">
+                                    <div class="description-section">
+                                        <h3>Descripción del Producto</h3>
+                                        <p>El Soplador Husqvarna 570BTS es un soplador de mochila profesional con motor X-Torq de 65.6cc de 2 tiempos. Diseñado para uso comercial intensivo, ofrece una velocidad de aire de 231 mph ideal para grandes áreas y trabajos profesionales. Su sistema anti-vibración y correas acolchadas garantizan máximo confort durante todo el día.</p>
+
+                                        <h4>Características Principales</h4>
+                                        <ul>
+                                            <li>Motor X-Torq de 65.6cc de 2 tiempos de alta potencia</li>
+                                            <li>Velocidad de aire de 231 mph</li>
+                                            <li>Sistema anti-vibración para mayor confort</li>
+                                            <li>Correas acolchadas ergonómicas</li>
+                                            <li>Tecnología X-Torq para menores emisiones</li>
+                                            <li>Arranque Easy Start</li>
+                                            <li>Respaldo ergonómico ventilado</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Tab: Especificaciones -->
+                                <div class="tab-content-panel" id="especificaciones-570bts">
+                                    <h3>Especificaciones Técnicas</h3>
+                                    <div class="specs-grid">
+                                        <div class="spec-item">
+                                            <h4>Motor</h4>
+                                            <p>65.6cc, 2 tiempos X-Torq</p>
+                                        </div>
+                                        <div class="spec-item">
+                                            <h4>Velocidad de aire</h4>
+                                            <p>231 mph</p>
+                                        </div>
+                                        <div class="spec-item">
+                                            <h4>Peso</h4>
+                                            <p>11.6 kg</p>
+                                        </div>
+                                        <div class="spec-item">
+                                            <h4>Tipo</h4>
+                                            <p>Mochila profesional</p>
+                                        </div>
+                                        <div class="spec-item">
+                                            <h4>Uso recomendado</h4>
+                                            <p>Comercial intensivo</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tab: Qué Incluye -->
+                                <div class="tab-content-panel" id="incluye-570bts">
+                                    <h3>Qué Incluye</h3>
+                                    <ul class="includes-list">
+                                        <li>Soplador Husqvarna 570BTS completo</li>
+                                        <li>Correas acolchadas de mochila</li>
+                                        <li>Tubo de soplado profesional</li>
+                                        <li>Manual de usuario en español</li>
+                                        <li>Certificado de garantía</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna Derecha: Logo + Precio + Botones -->
+                    <div class="product-right-column">
+                        <!-- Logo de Husqvarna MÁS GRANDE (500px height box) -->
+                        <div class="husqvarna-logo-sidebar">
+                            <img src="images/husqvarna-logo-hd.png" alt="Husqvarna" class="husqvarna-logo-xl">
                         </div>
 
-                        <!-- Característica 3 -->
-                        <div class="feature-item" style="padding: 30px 20px; border-left: 4px solid #ff6600; background: #f8faff;">
-                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                <div style="width: 50px; height: 50px; background: #ff6600; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                                    <i class="fas fa-leaf" style="color: white; font-size: 20px;"></i>
-                                </div>
-                                <h3 style="color: #253967; font-size: 1.3rem; font-weight: bold; margin: 0;">Bajas Emisiones</h3>
+                        <!-- Precio del Producto -->
+                        <div class="product-price-box">
+                            <p class="price-text">Precio de Venta:</p>
+                            <div class="price-display">
+                                <span class="price-amount">$12,999</span>
+                                <span class="price-currency">MXN</span>
                             </div>
-                            <p style="color: #666; line-height: 1.6; margin: 0;">Tecnología X-Torq que reduce emisiones y consumo de combustible hasta 20%</p>
+                            <p class="price-note">*Precio sujeto a cambios sin previo aviso</p>
                         </div>
 
-                        <!-- Característica 4 -->
-                        <div class="feature-item" style="padding: 30px 20px; border-left: 4px solid #ff6600; background: #f8faff;">
-                            <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                                <div style="width: 50px; height: 50px; background: #ff6600; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                                    <i class="fas fa-weight-hanging" style="color: white; font-size: 20px;"></i>
+                        <!-- Botón de Compra Coppel -->
+                        <div class="purchase-button">
+                            <div onclick="window.open('https://www.coppel.com', '_blank')"
+                                 style="display: flex !important; align-items: center !important; justify-content: center !important; width: 100% !important; padding: 20px 30px !important; background-color: #05298E !important; border-radius: 10px !important; cursor: pointer !important; min-height: 75px !important; color: #FFFFFF !important; font-family: 'Sharp Sans No 2', sans-serif !important; font-weight: bold !important; transition: all 0.3s ease !important; box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1) !important;">
+                                <div style="color: #FFFFFF !important; position: relative !important;">
+                                    <div style="color: #FFFFFF !important; font-size: 1.125rem !important; text-align: left !important; margin-bottom: 8px !important; font-family: 'Sharp Sans No 2', sans-serif !important; font-weight: bold !important;">De venta en</div>
+                                    <div style="color: #FFFFFF !important; display: flex !important; align-items: center !important; justify-content: flex-start !important; position: relative !important;">
+                                        <div style="display: inline-flex !important; gap: 4px !important; align-items: center !important; margin-right: 12px !important;">
+                                            <div style="width: 22px !important; height: 22px !important; background: #F0D224 !important; border-radius: 50% !important; border: none !important;"></div>
+                                            <div style="width: 16px !important; height: 16px !important; background: #F0D224 !important; border-radius: 50% !important; border: none !important;"></div>
+                                            <div style="width: 16px !important; height: 16px !important; background: #F0D224 !important; border-radius: 50% !important; border: none !important;"></div>
+                                        </div>
+                                        <span style="color: #FFFFFF !important; font-weight: bold !important; font-size: 2.25rem !important; font-family: 'Sharp Sans No 2', sans-serif !important; margin-left: 6px !important;">Coppel</span>
+                                    </div>
                                 </div>
-                                <h3 style="color: #253967; font-size: 1.3rem; font-weight: bold; margin: 0;">Diseño Ergonómico</h3>
                             </div>
-                            <p style="color: #666; line-height: 1.6; margin: 0;">Arneses ajustables y balanceo perfecto para trabajo prolongado sin fatiga</p>
+                        </div>
+
+                        <!-- Botón WhatsApp -->
+                        <div class="whatsapp-button">
+                            <div onclick="window.open('https://wa.me/526673298505?text=Hola, me interesa el Soplador Husqvarna 570BTS Mochila - $12,999 MXN. Necesito información y/o cotización para venta directa. ¿Podrían ayudarme?', '_blank')"
+                                 style="display: flex !important; align-items: center !important; justify-content: center !important; width: 100% !important; padding: 20px 30px !important; background-color: #25D366 !important; border-radius: 10px !important; cursor: pointer !important; min-height: 75px !important; color: #FFFFFF !important; font-family: 'Sharp Sans No 2', sans-serif !important; font-weight: bold !important; transition: all 0.3s ease !important; box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1) !important; margin-top: 16px !important;">
+                                <div style="display: flex !important; align-items: center !important; gap: 12px !important; color: #FFFFFF !important;">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink: 0 !important;">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516"/>
+                                    </svg>
+                                    <div style="color: #FFFFFF !important; position: relative !important;">
+                                        <div style="color: #FFFFFF !important; font-size: 1.125rem !important; text-align: left !important; margin-bottom: 8px !important; font-family: 'Sharp Sans No 2', sans-serif !important; font-weight: bold !important;">Información y/o venta directa</div>
+                                        <div style="color: #FFFFFF !important; display: flex !important; align-items: center !important; justify-content: flex-start !important; position: relative !important;">
+                                            <span style="color: #FFFFFF !important; font-weight: bold !important; font-size: 2.25rem !important; font-family: 'Sharp Sans No 2', sans-serif !important;">WhatsApp</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div> <!-- Cierre de standard-product-layout -->
+        </div> <!-- Cierre de container -->
+    </section>
 
-            <!-- Sección Modelos Disponibles -->
-            <section class="mower-models" style="padding: 80px 0; background: #f8faff;">
-                <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-                    <div class="models-header" style="text-align: center; margin-bottom: 60px; padding: 40px; background: white; border-radius: 15px; border: 2px solid #ff6600;">
-                        <h2 style="color: #253967; font-size: 2rem; margin-bottom: 15px; font-weight: bold;">¿Listo para mantener tu jardín impecable?</h2>
-                        <p style="color: #666; font-size: 1.1rem; margin-bottom: 0;">Explora nuestros modelos disponibles y encuentra el equipo perfecto para tu proyecto</p>
+    <!-- Producto 3: Soplador Husqvarna 345BT Mochila -->
+    <section class="product-page" id="soplador-345bt">
+        <div class="container">
+            <!-- Breadcrumb Navigation -->
+            <nav class="breadcrumb-nav">
+                <a href="index.html">Inicio</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="sopladoras.html">Sopladoras</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Soplador Husqvarna 345BT Mochila</span>
+            </nav>
+
+            <!-- Layout Estándar de Producto -->
+            <div class="standard-product-layout">
+                <!-- Título del Producto - Ancho Completo -->
+                <div class="product-title-full-width">
+                    <h1>Soplador Husqvarna 345BT Mochila</h1>
+                </div>
+
+                <!-- Área de Contenido: Imagen + Info -->
+                <div class="product-content-area">
+                    <!-- Columna Izquierda: Solo Foto -->
+                    <div class="product-left-column">
+                        <!-- Fotos del Producto -->
+                        <div class="product-photo">
+                            <!-- Galería de Producto con Zoom -->
+                            <div class="product-gallery">
+                                <div class="main-image">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Soplador 345BT Principal" class="product-image active" id="345bt-image1">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Soplador 345BT Motor" class="product-image" id="345bt-image2">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Soplador 345BT Sistema" class="product-image" id="345bt-image3">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Soplador 345BT Detalles" class="product-image" id="345bt-image4">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Soplador 345BT Accesorios" class="product-image" id="345bt-image5">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Soplador 345BT Manual" class="product-image" id="345bt-image6">
+                                </div>
+                                <div class="image-thumbnails">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Principal" class="thumbnail active" data-target="345bt-image1">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Motor" class="thumbnail" data-target="345bt-image2">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Sistema" class="thumbnail" data-target="345bt-image3">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Detalles" class="thumbnail" data-target="345bt-image4">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Accesorios" class="thumbnail" data-target="345bt-image5">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Manual" class="thumbnail" data-target="345bt-image6">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tabs de Información debajo de la foto -->
+                        <div class="product-tabs">
+                            <div class="tabs-navigation">
+                                <button class="tab-nav-btn active" data-tab="descripcion-345bt">Descripción</button>
+                                <button class="tab-nav-btn" data-tab="especificaciones-345bt">Especificaciones</button>
+                                <button class="tab-nav-btn" data-tab="incluye-345bt">Qué Incluye</button>
+                            </div>
+
+                            <div class="tabs-container">
+                                <!-- Tab: Descripción -->
+                                <div class="tab-content-panel active" id="descripcion-345bt">
+                                    <div class="description-section">
+                                        <h3>Descripción del Producto</h3>
+                                        <p>Soplador de mochila profesional con motor X-Torq de 45cc, velocidad de 210 mph, peso 9.5 kg, uso profesional. Diseñado para tareas exigentes con alto rendimiento y confort durante largas jornadas.</p>
+
+                                        <h4>Características Principales</h4>
+                                        <ul>
+                                            <li>Motor X-Torq de 45cc de 2 tiempos</li>
+                                            <li>Velocidad de aire de 210 mph</li>
+                                            <li>Peso optimizado de 9.5 kg</li>
+                                            <li>Tipo mochila profesional</li>
+                                            <li>Sistema anti-vibración</li>
+                                            <li>Correas ergonómicas acolchadas</li>
+                                            <li>Uso profesional intensivo</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Tab: Especificaciones -->
+                                <div class="tab-content-panel" id="especificaciones-345bt">
+                                    <h3>Especificaciones Técnicas</h3>
+                                    <div class="specs-grid">
+                                        <div class="spec-item">
+                                            <h4>Motor</h4>
+                                            <p>45cc 2 tiempos X-Torq</p>
+                                        </div>
+                                        <div class="spec-item">
+                                            <h4>Velocidad</h4>
+                                            <p>210 mph</p>
+                                        </div>
+                                        <div class="spec-item">
+                                            <h4>Peso</h4>
+                                            <p>9.5 kg</p>
+                                        </div>
+                                        <div class="spec-item">
+                                            <h4>Tipo</h4>
+                                            <p>Mochila profesional</p>
+                                        </div>
+                                        <div class="spec-item">
+                                            <h4>Uso</h4>
+                                            <p>Profesional</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tab: Qué Incluye -->
+                                <div class="tab-content-panel" id="incluye-345bt">
+                                    <h3>Qué Incluye</h3>
+                                    <ul class="includes-list">
+                                        <li>Soplador Husqvarna 345BT completo</li>
+                                        <li>Correas de mochila profesional</li>
+                                        <li>Tubo de soplado</li>
+                                        <li>Manual de usuario en español</li>
+                                        <li>Certificado de garantía</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div class="models-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 800px; margin: 0 auto;">
-                        <!-- Modelo LC 141C -->
-                        <button style="background: linear-gradient(135deg, #ff6600, #e55a00); color: white; border: none; padding: 20px; border-radius: 10px; font-weight: bold; cursor: pointer; transition: all 0.3s ease; min-height: 60px; font-size: 1rem;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(255,102,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                            Ver Husqvarna LC 141C
-                        </button>
-                        
-                        <!-- Modelo LC 247S -->
-                        <button style="background: linear-gradient(135deg, #ff6600, #e55a00); color: white; border: none; padding: 20px; border-radius: 10px; font-weight: bold; cursor: pointer; transition: all 0.3s ease; min-height: 60px; font-size: 1rem;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(255,102,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                            Ver Husqvarna LC 247S
-                        </button>
-                        
-                        <!-- Modelo LC 353V -->
-                        <button style="background: linear-gradient(135deg, #ff6600, #e55a00); color: white; border: none; padding: 20px; border-radius: 10px; font-weight: bold; cursor: pointer; transition: all 0.3s ease; min-height: 60px; font-size: 1rem;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(255,102,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                            Ver Husqvarna LC 353V
-                        </button>
-                        
-                        <!-- Modelo Automower -->
-                        <button style="background: linear-gradient(135deg, #ff6600, #e55a00); color: white; border: none; padding: 20px; border-radius: 10px; font-weight: bold; cursor: pointer; transition: all 0.3s ease; min-height: 60px; font-size: 1rem;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(255,102,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                            Ver Husqvarna Automower
-                        </button>
-                        
-                        <!-- Modelo R 216T -->
-                        <button style="background: linear-gradient(135deg, #ff6600, #e55a00); color: white; border: none; padding: 20px; border-radius: 10px; font-weight: bold; cursor: pointer; transition: all 0.3s ease; min-height: 60px; font-size: 1rem;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(255,102,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                            Ver Husqvarna R 216T
-                        </button>
-                        
-                        <!-- Modelo LC 551SP -->
-                        <button style="background: linear-gradient(135deg, #ff6600, #e55a00); color: white; border: none; padding: 20px; border-radius: 10px; font-weight: bold; cursor: pointer; transition: all 0.3s ease; min-height: 60px; font-size: 1rem;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(255,102,0,0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                            Ver Husqvarna LC 551SP
-                        </button>
-                    </div>
-                    
-                    <!-- Próximamente -->
-                    <div style="text-align: center; margin-top: 50px; padding: 30px; background: white; border-radius: 12px; border: 1px solid #e5e7eb;">
-                        <h3 style="color: #253967; margin-bottom: 15px;">Próximamente disponibles</h3>
-                        <p style="color: #666; margin-bottom: 20px;">Estamos trabajando para traerte el catálogo completo de podadoras profesionales</p>
-                        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                            <a href="motosierras.html" style="background: #253967; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; display: inline-flex; align-items: center;">
-                                <i class="fas fa-cut" style="margin-right: 8px;"></i>Ver Motosierras
-                            </a>
-                            <a href="motocultivadores.html" style="background: #ff6600; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; display: inline-flex; align-items: center;">
-                                <i class="fas fa-seedling" style="margin-right: 8px;"></i>Ver Motocultivadores
-                            </a>
+
+                    <!-- Columna Derecha: Logo + Precio + Botones -->
+                    <div class="product-right-column">
+                        <!-- Logo de Husqvarna MÁS GRANDE (500px height box) -->
+                        <div class="husqvarna-logo-sidebar">
+                            <img src="images/husqvarna-logo-hd.png" alt="Husqvarna" class="husqvarna-logo-xl">
+                        </div>
+
+                        <!-- Precio del Producto -->
+                        <div class="product-price-box">
+                            <p class="price-text">Precio de Venta:</p>
+                            <div class="price-display">
+                                <span class="price-amount">$9,999</span>
+                                <span class="price-currency">MXN</span>
+                            </div>
+                            <p class="price-note">*Precio sujeto a cambios sin previo aviso</p>
+                        </div>
+
+                        <!-- Botón de Compra Coppel -->
+                        <div class="purchase-button">
+                            <div onclick="window.open('https://www.coppel.com', '_blank')"
+                                 style="display: flex !important; align-items: center !important; justify-content: center !important; width: 100% !important; padding: 20px 30px !important; background-color: #05298E !important; border-radius: 10px !important; cursor: pointer !important; min-height: 75px !important; color: #FFFFFF !important; font-family: 'Sharp Sans No 2', sans-serif !important; font-weight: bold !important; transition: all 0.3s ease !important; box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1) !important;">
+                                <div style="color: #FFFFFF !important; position: relative !important;">
+                                    <div style="color: #FFFFFF !important; font-size: 1.125rem !important; text-align: left !important; margin-bottom: 8px !important; font-family: 'Sharp Sans No 2', sans-serif !important; font-weight: bold !important;">De venta en</div>
+                                    <div style="color: #FFFFFF !important; display: flex !important; align-items: center !important; justify-content: flex-start !important; position: relative !important;">
+                                        <div style="display: inline-flex !important; gap: 4px !important; align-items: center !important; margin-right: 12px !important;">
+                                            <div style="width: 22px !important; height: 22px !important; background: #F0D224 !important; border-radius: 50% !important; border: none !important;"></div>
+                                            <div style="width: 16px !important; height: 16px !important; background: #F0D224 !important; border-radius: 50% !important; border: none !important;"></div>
+                                            <div style="width: 16px !important; height: 16px !important; background: #F0D224 !important; border-radius: 50% !important; border: none !important;"></div>
+                                        </div>
+                                        <span style="color: #FFFFFF !important; font-weight: bold !important; font-size: 2.25rem !important; font-family: 'Sharp Sans No 2', sans-serif !important; margin-left: 6px !important;">Coppel</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Botón WhatsApp -->
+                        <div class="whatsapp-button">
+                            <div onclick="window.open('https://wa.me/526673298505?text=Hola, me interesa el Soplador Husqvarna 345BT Mochila - $9,999 MXN. Necesito información y/o cotización para venta directa. ¿Podrían ayudarme?', '_blank')"
+                                 style="display: flex !important; align-items: center !important; justify-content: center !important; width: 100% !important; padding: 20px 30px !important; background-color: #25D366 !important; border-radius: 10px !important; cursor: pointer !important; min-height: 75px !important; color: #FFFFFF !important; font-family: 'Sharp Sans No 2', sans-serif !important; font-weight: bold !important; transition: all 0.3s ease !important; box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1) !important; margin-top: 16px !important;">
+                                <div style="display: flex !important; align-items: center !important; gap: 12px !important; color: #FFFFFF !important;">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink: 0 !important;">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516"/>
+                                    </svg>
+                                    <div style="color: #FFFFFF !important; position: relative !important;">
+                                        <div style="color: #FFFFFF !important; font-size: 1.125rem !important; text-align: left !important; margin-bottom: 8px !important; font-family: 'Sharp Sans No 2', sans-serif !important; font-weight: bold !important;">Información y/o venta directa</div>
+                                        <div style="color: #FFFFFF !important; display: flex !important; align-items: center !important; justify-content: flex-start !important; position: relative !important;">
+                                            <span style="color: #FFFFFF !important; font-weight: bold !important; font-size: 2.25rem !important; font-family: 'Sharp Sans No 2', sans-serif !important;">WhatsApp</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div> <!-- Cierre de standard-product-layout -->
+        </div> <!-- Cierre de container -->
+    </section>
 
-            <!-- PRODUCTOS SECTION -->
-            <section class="products-section" style="padding: 80px 0; background: white;">
-                <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-                    <h2 style="text-align: center; font-size: 2.5rem; color: #253967; margin-bottom: 60px; font-weight: bold;">Nuestros Productos</h2>
+    <!-- Producto 4: Soplador Husqvarna 125B Naranja -->
+    <section class="product-page" id="soplador-125b-naranja">
+        <div class="container">
+            <!-- Breadcrumb Navigation -->
+            <nav class="breadcrumb-nav">
+                <a href="index.html">Inicio</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="sopladoras.html">Sopladoras</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Soplador Husqvarna 125B Naranja</span>
+            </nav>
 
-                    <!-- Producto 1: Soplador Husqvarna 125B Manual -->
-                    <section class="product-card" id="soplador-125b-manual" style="margin-bottom: 60px; background: white; border-radius: 12px; padding: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                        <div class="product-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
-                            <!-- Columna Izquierda: Imagen Principal -->
-                            <div class="product-left-column">
-                                <div class="product-image-section">
-                                    <h2 style="color: #ff6600; font-size: 2rem; margin-bottom: 20px;">Soplador Husqvarna 125B Manual</h2>
-                                    <!-- Imagen Principal -->
-                                    <div class="main-image" style="text-align: center; background: #f8faff; padding: 30px; border-radius: 12px; margin-bottom: 20px;">
-                                        <img src="images/soplador-125b-manual.jpg" alt="Soplador Husqvarna 125B Manual" style="max-width: 100%; height: auto; max-height: 400px;">
-                                    </div>
-                                    <!-- Descripción Breve -->
-                                    <div style="background: linear-gradient(135deg, #253967 0%, #1e2c5a 100%); color: white; padding: 25px; border-radius: 10px; margin-bottom: 20px;">
-                                        <p style="line-height: 1.8; margin: 0;">El Soplador Husqvarna 125B Manual es un equipo liviano y versátil equipado con motor de 28cc de 2 tiempos. Perfecto para uso doméstico, ofrece una velocidad de aire de 170 mph ideal para limpieza de hojas y residuos en jardines y patios. Su diseño compacto y bajo peso facilita su manejo durante períodos prolongados.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Columna Derecha: Especificaciones y Botones -->
-                            <div class="product-right-column">
-                                <!-- Logo Husqvarna -->
-                                <div style="text-align: center; margin-bottom: 30px;">
-                                    <img src="images/husqvarna-logo-hd.png" alt="Husqvarna" style="height: 80px;">
-                                </div>
-                                <!-- Tabs de Información -->
-                                <div class="product-tabs">
-                                    <div class="tabs-navigation" style="display: flex; background: #f8f9fa; border-bottom: 1px solid #ddd; border-radius: 8px 8px 0 0;">
-                                        <button class="tab-nav-btn active" data-tab="descripcion-125b-manual" style="flex: 1; padding: 15px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: #253967; border-bottom: 3px solid #ff6600;">Descripción</button>
-                                        <button class="tab-nav-btn" data-tab="especificaciones-125b-manual" style="flex: 1; padding: 15px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: #666;">Especificaciones</button>
-                                        <button class="tab-nav-btn" data-tab="incluye-125b-manual" style="flex: 1; padding: 15px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: #666;">Qué Incluye</button>
-                                    </div>
-                                    <div class="tabs-container">
-                                        <!-- Tab: Descripción -->
-                                        <div class="tab-content-panel active" id="descripcion-125b-manual" style="padding: 30px; display: block;">
-                                            <h3 style="color: #253967; margin-bottom: 15px;">Descripción del Producto</h3>
-                                            <p style="color: #666; line-height: 1.8;">El Soplador Husqvarna 125B Manual es ideal para propietarios de viviendas que buscan una herramienta eficiente y fácil de usar para mantener sus jardines limpios. Con un peso de solo 4.3 kg, es uno de los sopladores más ligeros del mercado, lo que facilita su manejo sin causar fatiga. El motor de 2 tiempos de 28cc proporciona suficiente potencia para limpiar hojas, recortes de césped y otros residuos con facilidad.</p>
-                                        </div>
-                                        <!-- Tab: Especificaciones -->
-                                        <div class="tab-content-panel" id="especificaciones-125b-manual" style="padding: 30px; display: none;">
-                                            <h3 style="color: #253967; margin-bottom: 20px;">Especificaciones Técnicas</h3>
-                                            <div style="display: grid; gap: 15px;">
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Motor:</strong>
-                                                    <span style="color: #666;">28cc, 2 tiempos</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Velocidad aire:</strong>
-                                                    <span style="color: #666;">170 mph</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Peso:</strong>
-                                                    <span style="color: #666;">4.3 kg</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Tipo:</strong>
-                                                    <span style="color: #666;">Manual, portátil</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Precio:</strong>
-                                                    <span style="color: #666;">$3,499 MXN</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Tab: Qué Incluye -->
-                                        <div class="tab-content-panel" id="incluye-125b-manual" style="padding: 30px; display: none;">
-                                            <h3 style="color: #253967; margin-bottom: 20px;">Características Destacadas</h3>
-                                            <ul style="list-style: none; padding: 0;">
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Liviano y fácil de manejar</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Sistema de arranque fácil</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Bajo nivel de ruido</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Ideal para uso doméstico</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Tubo de soplado desmontable</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Bajo consumo de combustible</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Botones de Compra -->
-                                <div style="margin-top: 30px; display: flex; flex-direction: column; gap: 15px;">
-                                    <a href="https://wa.me/526673298505?text=Hola, me interesa el Soplador Husqvarna 125B Manual - $3,499 MXN" target="_blank" style="background: #25d366; color: white; padding: 15px; text-align: center; border-radius: 8px; text-decoration: none; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                                        <i class="fab fa-whatsapp"></i>
-                                        Consultar por WhatsApp
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Producto 2: Soplador Husqvarna 570BTS Mochila -->
-                    <section class="product-card" id="soplador-570bts" style="margin-bottom: 60px; background: white; border-radius: 12px; padding: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                        <div class="product-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
-                            <div class="product-left-column">
-                                <div class="product-image-section">
-                                    <h2 style="color: #ff6600; font-size: 2rem; margin-bottom: 20px;">Soplador Husqvarna 570BTS Mochila</h2>
-                                    <div class="main-image" style="text-align: center; background: #f8faff; padding: 30px; border-radius: 12px; margin-bottom: 20px;">
-                                        <img src="images/soplador-570bts.jpg" alt="Soplador Husqvarna 570BTS Mochila" style="max-width: 100%; height: auto; max-height: 400px;">
-                                    </div>
-                                    <div style="background: linear-gradient(135deg, #253967 0%, #1e2c5a 100%); color: white; padding: 25px; border-radius: 10px; margin-bottom: 20px;">
-                                        <p style="line-height: 1.8; margin: 0;">El Soplador Husqvarna 570BTS es un soplador de mochila profesional con motor X-Torq de 65.6cc de 2 tiempos. Diseñado para uso comercial intensivo, ofrece una velocidad de aire de 231 mph ideal para grandes áreas y trabajos profesionales. Su sistema anti-vibración y correas acolchadas garantizan máximo confort durante todo el día.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-right-column">
-                                <div style="text-align: center; margin-bottom: 30px;">
-                                    <img src="images/husqvarna-logo-hd.png" alt="Husqvarna" style="height: 80px;">
-                                </div>
-                                <div class="product-tabs">
-                                    <div class="tabs-navigation" style="display: flex; background: #f8f9fa; border-bottom: 1px solid #ddd; border-radius: 8px 8px 0 0;">
-                                        <button class="tab-nav-btn active" data-tab="descripcion-570bts" style="flex: 1; padding: 15px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: #253967; border-bottom: 3px solid #ff6600;">Descripción</button>
-                                        <button class="tab-nav-btn" data-tab="especificaciones-570bts" style="flex: 1; padding: 15px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: #666;">Especificaciones</button>
-                                        <button class="tab-nav-btn" data-tab="incluye-570bts" style="flex: 1; padding: 15px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: #666;">Qué Incluye</button>
-                                    </div>
-                                    <div class="tabs-container">
-                                        <div class="tab-content-panel active" id="descripcion-570bts" style="padding: 30px; display: block;">
-                                            <h3 style="color: #253967; margin-bottom: 15px;">Descripción del Producto</h3>
-                                            <p style="color: #666; line-height: 1.8;">El Husqvarna 570BTS es el soplador de mochila más potente de la línea, diseñado específicamente para profesionales del paisajismo y mantenimiento de grandes propiedades. Su motor X-Torq de 65.6cc proporciona una potencia excepcional mientras reduce el consumo de combustible y las emisiones. El sistema de correas acolchadas y el respaldo ergonómico distribuyen el peso uniformemente para trabajar cómodamente durante largas jornadas.</p>
-                                        </div>
-                                        <div class="tab-content-panel" id="especificaciones-570bts" style="padding: 30px; display: none;">
-                                            <h3 style="color: #253967; margin-bottom: 20px;">Especificaciones Técnicas</h3>
-                                            <div style="display: grid; gap: 15px;">
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Motor:</strong>
-                                                    <span style="color: #666;">65.6cc, 2 tiempos X-Torq</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Velocidad aire:</strong>
-                                                    <span style="color: #666;">231 mph</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Peso:</strong>
-                                                    <span style="color: #666;">11.6 kg</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Tipo:</strong>
-                                                    <span style="color: #666;">Mochila profesional</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Precio:</strong>
-                                                    <span style="color: #666;">$12,999 MXN</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-content-panel" id="incluye-570bts" style="padding: 30px; display: none;">
-                                            <h3 style="color: #253967; margin-bottom: 20px;">Características Destacadas</h3>
-                                            <ul style="list-style: none; padding: 0;">
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Alta potencia para uso comercial</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Sistema anti-vibración</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Correas acolchadas ergonómicas</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Tecnología X-Torq para menores emisiones</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Arranque Easy Start</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Respaldo ergonómico ventilado</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div style="margin-top: 30px; display: flex; flex-direction: column; gap: 15px;">
-                                    <a href="https://wa.me/526673298505?text=Hola, me interesa el Soplador Husqvarna 570BTS Mochila - $12,999 MXN" target="_blank" style="background: #25d366; color: white; padding: 15px; text-align: center; border-radius: 8px; text-decoration: none; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                                        <i class="fab fa-whatsapp"></i>
-                                        Consultar por WhatsApp
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Producto 3: Soplador Husqvarna 345BT Mochila -->
-                    <section class="product-card" id="soplador-345bt" style="margin-bottom: 60px; background: white; border-radius: 12px; padding: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                        <div class="product-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
-                            <div class="product-left-column">
-                                <div class="product-image-section">
-                                    <h2 style="color: #ff6600; font-size: 2rem; margin-bottom: 20px;">Soplador Husqvarna 345BT Mochila</h2>
-                                    <div class="main-image" style="text-align: center; background: #f8faff; padding: 30px; border-radius: 12px; margin-bottom: 20px;">
-                                        <img src="images/soplador-345bt.jpg" alt="Soplador Husqvarna 345BT Mochila" style="max-width: 100%; height: auto; max-height: 400px;">
-                                    </div>
-                                    <div style="background: linear-gradient(135deg, #253967 0%, #1e2c5a 100%); color: white; padding: 25px; border-radius: 10px; margin-bottom: 20px;">
-                                        <p style="line-height: 1.8; margin: 0;">El Soplador Husqvarna 345BT es un soplador de mochila potente con motor de 50.2cc de 2 tiempos. Diseñado para uso profesional, ofrece una velocidad de aire de 210 mph ideal para trabajos exigentes. Su diseño ergonómico y ventilador axial garantizan rendimiento y comodidad en todo momento.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-right-column">
-                                <div style="text-align: center; margin-bottom: 30px;">
-                                    <img src="images/husqvarna-logo-hd.png" alt="Husqvarna" style="height: 80px;">
-                                </div>
-                                <div class="product-tabs">
-                                    <div class="tabs-navigation" style="display: flex; background: #f8f9fa; border-bottom: 1px solid #ddd; border-radius: 8px 8px 0 0;">
-                                        <button class="tab-nav-btn active" data-tab="descripcion-345bt" style="flex: 1; padding: 15px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: #253967; border-bottom: 3px solid #ff6600;">Descripción</button>
-                                        <button class="tab-nav-btn" data-tab="especificaciones-345bt" style="flex: 1; padding: 15px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: #666;">Especificaciones</button>
-                                        <button class="tab-nav-btn" data-tab="incluye-345bt" style="flex: 1; padding: 15px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: #666;">Qué Incluye</button>
-                                    </div>
-                                    <div class="tabs-container">
-                                        <div class="tab-content-panel active" id="descripcion-345bt" style="padding: 30px; display: block;">
-                                            <h3 style="color: #253967; margin-bottom: 15px;">Descripción del Producto</h3>
-                                            <p style="color: #666; line-height: 1.8;">El Husqvarna 345BT combina potencia y ergonomía en un soplador de mochila profesional. Su motor de 50.2cc proporciona suficiente fuerza para mover hojas húmedas y residuos pesados, mientras que el ventilador axial optimiza el flujo de aire. El diseño ergonómico con correas acolchadas permite trabajar cómodamente durante horas.</p>
-                                        </div>
-                                        <div class="tab-content-panel" id="especificaciones-345bt" style="padding: 30px; display: none;">
-                                            <h3 style="color: #253967; margin-bottom: 20px;">Especificaciones Técnicas</h3>
-                                            <div style="display: grid; gap: 15px;">
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Motor:</strong>
-                                                    <span style="color: #666;">50.2cc, 2 tiempos</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Velocidad aire:</strong>
-                                                    <span style="color: #666;">210 mph</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Peso:</strong>
-                                                    <span style="color: #666;">10.3 kg</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Tipo:</strong>
-                                                    <span style="color: #666;">Mochila</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Precio:</strong>
-                                                    <span style="color: #666;">$9,999 MXN</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-content-panel" id="incluye-345bt" style="padding: 30px; display: none;">
-                                            <h3 style="color: #253967; margin-bottom: 20px;">Características Destacadas</h3>
-                                            <ul style="list-style: none; padding: 0;">
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Potente motor de 50.2cc</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Diseño ergonómico</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Ventilador axial de alto rendimiento</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Ideal para uso profesional</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Correas acolchadas ajustables</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Control de velocidad variable</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div style="margin-top: 30px; display: flex; flex-direction: column; gap: 15px;">
-                                    <a href="https://wa.me/526673298505?text=Hola, me interesa el Soplador Husqvarna 345BT Mochila - $9,999 MXN" target="_blank" style="background: #25d366; color: white; padding: 15px; text-align: center; border-radius: 8px; text-decoration: none; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                                        <i class="fab fa-whatsapp"></i>
-                                        Consultar por WhatsApp
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Producto 4: Soplador Husqvarna 125B Color Naranja -->
-                    <section class="product-card" id="soplador-125b-naranja" style="margin-bottom: 60px; background: white; border-radius: 12px; padding: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                        <div class="product-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
-                            <div class="product-left-column">
-                                <div class="product-image-section">
-                                    <h2 style="color: #ff6600; font-size: 2rem; margin-bottom: 20px;">Soplador Husqvarna 125B Color Naranja</h2>
-                                    <div class="main-image" style="text-align: center; background: #f8faff; padding: 30px; border-radius: 12px; margin-bottom: 20px;">
-                                        <img src="images/soplador-125b-naranja.jpg" alt="Soplador Husqvarna 125B Color Naranja" style="max-width: 100%; height: auto; max-height: 400px;">
-                                    </div>
-                                    <div style="background: linear-gradient(135deg, #253967 0%, #1e2c5a 100%); color: white; padding: 25px; border-radius: 10px; margin-bottom: 20px;">
-                                        <p style="line-height: 1.8; margin: 0;">El Soplador Husqvarna 125B Color Naranja es una versión especial del popular modelo 125B, con motor de 28cc de 2 tiempos. Este soplador manual compacto ofrece una velocidad de aire de 170 mph, ideal para limpieza doméstica eficiente. Su diseño naranja distintivo combina estilo con funcionalidad.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-right-column">
-                                <div style="text-align: center; margin-bottom: 30px;">
-                                    <img src="images/husqvarna-logo-hd.png" alt="Husqvarna" style="height: 80px;">
-                                </div>
-                                <div class="product-tabs">
-                                    <div class="tabs-navigation" style="display: flex; background: #f8f9fa; border-bottom: 1px solid #ddd; border-radius: 8px 8px 0 0;">
-                                        <button class="tab-nav-btn active" data-tab="descripcion-125b-naranja" style="flex: 1; padding: 15px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: #253967; border-bottom: 3px solid #ff6600;">Descripción</button>
-                                        <button class="tab-nav-btn" data-tab="especificaciones-125b-naranja" style="flex: 1; padding: 15px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: #666;">Especificaciones</button>
-                                        <button class="tab-nav-btn" data-tab="incluye-125b-naranja" style="flex: 1; padding: 15px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: #666;">Qué Incluye</button>
-                                    </div>
-                                    <div class="tabs-container">
-                                        <div class="tab-content-panel active" id="descripcion-125b-naranja" style="padding: 30px; display: block;">
-                                            <h3 style="color: #253967; margin-bottom: 15px;">Descripción del Producto</h3>
-                                            <p style="color: #666; line-height: 1.8;">Esta versión naranja del Husqvarna 125B ofrece las mismas características confiables del modelo estándar con un acabado distintivo. Perfecto para propietarios que valoran tanto el rendimiento como el diseño, este soplador ligero y compacto facilita la limpieza de hojas y residuos en jardines y patios con mínimo esfuerzo.</p>
-                                        </div>
-                                        <div class="tab-content-panel" id="especificaciones-125b-naranja" style="padding: 30px; display: none;">
-                                            <h3 style="color: #253967; margin-bottom: 20px;">Especificaciones Técnicas</h3>
-                                            <div style="display: grid; gap: 15px;">
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Motor:</strong>
-                                                    <span style="color: #666;">28cc, 2 tiempos</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Velocidad aire:</strong>
-                                                    <span style="color: #666;">170 mph</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Peso:</strong>
-                                                    <span style="color: #666;">4.3 kg</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Tipo:</strong>
-                                                    <span style="color: #666;">Manual</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Precio:</strong>
-                                                    <span style="color: #666;">$3,799 MXN</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-content-panel" id="incluye-125b-naranja" style="padding: 30px; display: none;">
-                                            <h3 style="color: #253967; margin-bottom: 20px;">Características Destacadas</h3>
-                                            <ul style="list-style: none; padding: 0;">
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Versión naranja distintiva</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Diseño compacto y ligero</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Eficiente consumo de combustible</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Fácil de almacenar</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Arranque rápido y confiable</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Ideal para jardines pequeños y medianos</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div style="margin-top: 30px; display: flex; flex-direction: column; gap: 15px;">
-                                    <a href="https://wa.me/526673298505?text=Hola, me interesa el Soplador Husqvarna 125B Color Naranja - $3,799 MXN" target="_blank" style="background: #25d366; color: white; padding: 15px; text-align: center; border-radius: 8px; text-decoration: none; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                                        <i class="fab fa-whatsapp"></i>
-                                        Consultar por WhatsApp
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Producto 5: Desbrozadora Husqvarna 545F Robusta -->
-                    <section class="product-card" id="desbrozadora-545f" style="margin-bottom: 60px; background: white; border-radius: 12px; padding: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                        <div class="product-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
-                            <div class="product-left-column">
-                                <div class="product-image-section">
-                                    <h2 style="color: #ff6600; font-size: 2rem; margin-bottom: 20px;">Desbrozadora Husqvarna 545F Robusta</h2>
-                                    <div class="main-image" style="text-align: center; background: #f8faff; padding: 30px; border-radius: 12px; margin-bottom: 20px;">
-                                        <img src="images/desbrozadora-545f.jpg" alt="Desbrozadora Husqvarna 545F Robusta" style="max-width: 100%; height: auto; max-height: 400px;">
-                                    </div>
-                                    <div style="background: linear-gradient(135deg, #253967 0%, #1e2c5a 100%); color: white; padding: 25px; border-radius: 10px; margin-bottom: 20px;">
-                                        <p style="line-height: 1.8; margin: 0;">La Desbrozadora Husqvarna 545F es una herramienta profesional robusta con motor X-Torq de 45cc de 2 tiempos y potencia de 2.1 kW. Diseñada para trabajo intensivo, cuenta con mango ergonómico, sistema anti-vibración y cabezal giratorio para máxima versatilidad en terrenos difíciles.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-right-column">
-                                <div style="text-align: center; margin-bottom: 30px;">
-                                    <img src="images/husqvarna-logo-hd.png" alt="Husqvarna" style="height: 80px;">
-                                </div>
-                                <div class="product-tabs">
-                                    <div class="tabs-navigation" style="display: flex; background: #f8f9fa; border-bottom: 1px solid #ddd; border-radius: 8px 8px 0 0;">
-                                        <button class="tab-nav-btn active" data-tab="descripcion-545f" style="flex: 1; padding: 15px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: #253967; border-bottom: 3px solid #ff6600;">Descripción</button>
-                                        <button class="tab-nav-btn" data-tab="especificaciones-545f" style="flex: 1; padding: 15px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: #666;">Especificaciones</button>
-                                        <button class="tab-nav-btn" data-tab="incluye-545f" style="flex: 1; padding: 15px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: #666;">Qué Incluye</button>
-                                    </div>
-                                    <div class="tabs-container">
-                                        <div class="tab-content-panel active" id="descripcion-545f" style="padding: 30px; display: block;">
-                                            <h3 style="color: #253967; margin-bottom: 15px;">Descripción del Producto</h3>
-                                            <p style="color: #666; line-height: 1.8;">La Husqvarna 545F combina potencia y comodidad en una desbrozadora profesional diseñada para uso intensivo. Su motor X-Torq de 45cc ofrece excelente rendimiento con menores emisiones y consumo de combustible. El mango ergonómico y el sistema anti-vibración reducen la fatiga durante largas jornadas, mientras que el cabezal giratorio permite trabajar en cualquier ángulo.</p>
-                                        </div>
-                                        <div class="tab-content-panel" id="especificaciones-545f" style="padding: 30px; display: none;">
-                                            <h3 style="color: #253967; margin-bottom: 20px;">Especificaciones Técnicas</h3>
-                                            <div style="display: grid; gap: 15px;">
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Motor:</strong>
-                                                    <span style="color: #666;">45cc, 2 tiempos X-Torq</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Potencia:</strong>
-                                                    <span style="color: #666;">2.1 kW</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Peso:</strong>
-                                                    <span style="color: #666;">5.8 kg</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Uso:</strong>
-                                                    <span style="color: #666;">Profesional</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Precio:</strong>
-                                                    <span style="color: #666;">$14,999 MXN</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-content-panel" id="incluye-545f" style="padding: 30px; display: none;">
-                                            <h3 style="color: #253967; margin-bottom: 20px;">Características Destacadas</h3>
-                                            <ul style="list-style: none; padding: 0;">
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Diseño profesional robusto</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Mango ergonómico ajustable</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Sistema anti-vibración efectivo</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Cabezal giratorio para versatilidad</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Tecnología X-Torq de bajas emisiones</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Arnés de doble hombro incluido</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div style="margin-top: 30px; display: flex; flex-direction: column; gap: 15px;">
-                                    <a href="https://wa.me/526673298505?text=Hola, me interesa la Desbrozadora Husqvarna 545F Robusta - $14,999 MXN" target="_blank" style="background: #25d366; color: white; padding: 15px; text-align: center; border-radius: 8px; text-decoration: none; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                                        <i class="fab fa-whatsapp"></i>
-                                        Consultar por WhatsApp
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Producto 6: Desbrozadora Husqvarna 545RX Robusta -->
-                    <section class="product-card" id="desbrozadora-545rx" style="margin-bottom: 60px; background: white; border-radius: 12px; padding: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                        <div class="product-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
-                            <div class="product-left-column">
-                                <div class="product-image-section">
-                                    <h2 style="color: #ff6600; font-size: 2rem; margin-bottom: 20px;">Desbrozadora Husqvarna 545RX Robusta</h2>
-                                    <div class="main-image" style="text-align: center; background: #f8faff; padding: 30px; border-radius: 12px; margin-bottom: 20px;">
-                                        <img src="images/desbrozadora-545rx.jpg" alt="Desbrozadora Husqvarna 545RX Robusta" style="max-width: 100%; height: auto; max-height: 400px;">
-                                    </div>
-                                    <div style="background: linear-gradient(135deg, #253967 0%, #1e2c5a 100%); color: white; padding: 25px; border-radius: 10px; margin-bottom: 20px;">
-                                        <p style="line-height: 1.8; margin: 0;">La Desbrozadora Husqvarna 545RX es una máquina de alto rendimiento con motor X-Torq de 45cc de 2 tiempos y potencia de 2.2 kW. Equipada con sistema AutoReturn para arranque fácil, esta desbrozadora profesional ofrece performance superior en las condiciones más exigentes.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-right-column">
-                                <div style="text-align: center; margin-bottom: 30px;">
-                                    <img src="images/husqvarna-logo-hd.png" alt="Husqvarna" style="height: 80px;">
-                                </div>
-                                <div class="product-tabs">
-                                    <div class="tabs-navigation" style="display: flex; background: #f8f9fa; border-bottom: 1px solid #ddd; border-radius: 8px 8px 0 0;">
-                                        <button class="tab-nav-btn active" data-tab="descripcion-545rx" style="flex: 1; padding: 15px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: #253967; border-bottom: 3px solid #ff6600;">Descripción</button>
-                                        <button class="tab-nav-btn" data-tab="especificaciones-545rx" style="flex: 1; padding: 15px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: #666;">Especificaciones</button>
-                                        <button class="tab-nav-btn" data-tab="incluye-545rx" style="flex: 1; padding: 15px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: #666;">Qué Incluye</button>
-                                    </div>
-                                    <div class="tabs-container">
-                                        <div class="tab-content-panel active" id="descripcion-545rx" style="padding: 30px; display: block;">
-                                            <h3 style="color: #253967; margin-bottom: 15px;">Descripción del Producto</h3>
-                                            <p style="color: #666; line-height: 1.8;">La Husqvarna 545RX es una desbrozadora premium con características avanzadas para profesionales exigentes. Su sistema AutoReturn facilita el arranque, mientras que el motor X-Torq de 2.2 kW proporciona potencia excepcional. Ideal para mantenimiento de grandes áreas, cunetas y vegetación densa, esta máquina combina rendimiento superior con comodidad de uso prolongado.</p>
-                                        </div>
-                                        <div class="tab-content-panel" id="especificaciones-545rx" style="padding: 30px; display: none;">
-                                            <h3 style="color: #253967; margin-bottom: 20px;">Especificaciones Técnicas</h3>
-                                            <div style="display: grid; gap: 15px;">
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Motor:</strong>
-                                                    <span style="color: #666;">45cc, 2 tiempos X-Torq</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Potencia:</strong>
-                                                    <span style="color: #666;">2.2 kW</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Peso:</strong>
-                                                    <span style="color: #666;">5.9 kg</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Uso:</strong>
-                                                    <span style="color: #666;">Alta performance profesional</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Precio:</strong>
-                                                    <span style="color: #666;">$15,999 MXN</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-content-panel" id="incluye-545rx" style="padding: 30px; display: none;">
-                                            <h3 style="color: #253967; margin-bottom: 20px;">Características Destacadas</h3>
-                                            <ul style="list-style: none; padding: 0;">
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Alta performance para uso intensivo</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Sistema AutoReturn para arranque fácil</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Motor X-Torq de alta eficiencia</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Diseño ergonómico avanzado</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Sistema anti-vibración optimizado</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Eje de acero sólido para mayor durabilidad</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div style="margin-top: 30px; display: flex; flex-direction: column; gap: 15px;">
-                                    <a href="https://wa.me/526673298505?text=Hola, me interesa la Desbrozadora Husqvarna 545RX Robusta - $15,999 MXN" target="_blank" style="background: #25d366; color: white; padding: 15px; text-align: center; border-radius: 8px; text-decoration: none; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                                        <i class="fab fa-whatsapp"></i>
-                                        Consultar por WhatsApp
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Producto 7: Desbrozadora Husqvarna 555RXT Robusta -->
-                    <section class="product-card" id="desbrozadora-555rxt" style="margin-bottom: 60px; background: white; border-radius: 12px; padding: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                        <div class="product-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
-                            <div class="product-left-column">
-                                <div class="product-image-section">
-                                    <h2 style="color: #ff6600; font-size: 2rem; margin-bottom: 20px;">Desbrozadora Husqvarna 555RXT Robusta</h2>
-                                    <div class="main-image" style="text-align: center; background: #f8faff; padding: 30px; border-radius: 12px; margin-bottom: 20px;">
-                                        <img src="images/desbrozadora-555rxt.jpg" alt="Desbrozadora Husqvarna 555RXT Robusta" style="max-width: 100%; height: auto; max-height: 400px;">
-                                    </div>
-                                    <div style="background: linear-gradient(135deg, #253967 0%, #1e2c5a 100%); color: white; padding: 25px; border-radius: 10px; margin-bottom: 20px;">
-                                        <p style="line-height: 1.8; margin: 0;">La Desbrozadora Husqvarna 555RXT es la herramienta definitiva para profesionales, con motor X-Torq de 55cc de 2 tiempos y máxima potencia de 2.5 kW. Diseñada para uso intensivo y durabilidad extrema, esta desbrozadora robusta enfrenta los trabajos más difíciles con facilidad.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-right-column">
-                                <div style="text-align: center; margin-bottom: 30px;">
-                                    <img src="images/husqvarna-logo-hd.png" alt="Husqvarna" style="height: 80px;">
-                                </div>
-                                <div class="product-tabs">
-                                    <div class="tabs-navigation" style="display: flex; background: #f8f9fa; border-bottom: 1px solid #ddd; border-radius: 8px 8px 0 0;">
-                                        <button class="tab-nav-btn active" data-tab="descripcion-555rxt" style="flex: 1; padding: 15px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: #253967; border-bottom: 3px solid #ff6600;">Descripción</button>
-                                        <button class="tab-nav-btn" data-tab="especificaciones-555rxt" style="flex: 1; padding: 15px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: #666;">Especificaciones</button>
-                                        <button class="tab-nav-btn" data-tab="incluye-555rxt" style="flex: 1; padding: 15px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: #666;">Qué Incluye</button>
-                                    </div>
-                                    <div class="tabs-container">
-                                        <div class="tab-content-panel active" id="descripcion-555rxt" style="padding: 30px; display: block;">
-                                            <h3 style="color: #253967; margin-bottom: 15px;">Descripción del Producto</h3>
-                                            <p style="color: #666; line-height: 1.8;">La Husqvarna 555RXT representa el pináculo de potencia y durabilidad en desbrozadoras profesionales. Con su motor X-Torq de 55cc y 2.5 kW de potencia, esta máquina está diseñada para enfrentar vegetación densa, matorrales gruesos y trabajos forestales exigentes. Su construcción robusta y componentes de alta calidad garantizan un rendimiento confiable día tras día, temporada tras temporada.</p>
-                                        </div>
-                                        <div class="tab-content-panel" id="especificaciones-555rxt" style="padding: 30px; display: none;">
-                                            <h3 style="color: #253967; margin-bottom: 20px;">Especificaciones Técnicas</h3>
-                                            <div style="display: grid; gap: 15px;">
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Motor:</strong>
-                                                    <span style="color: #666;">55cc, 2 tiempos X-Torq</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Potencia:</strong>
-                                                    <span style="color: #666;">2.5 kW</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Peso:</strong>
-                                                    <span style="color: #666;">6.2 kg</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Uso:</strong>
-                                                    <span style="color: #666;">Máxima potencia, uso intensivo</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Precio:</strong>
-                                                    <span style="color: #666;">$18,999 MXN</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-content-panel" id="incluye-555rxt" style="padding: 30px; display: none;">
-                                            <h3 style="color: #253967; margin-bottom: 20px;">Características Destacadas</h3>
-                                            <ul style="list-style: none; padding: 0;">
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Máxima potencia en su clase</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Diseñado para uso intensivo diario</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Durabilidad extrema y componentes reforzados</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Sistema anti-vibración profesional</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Tecnología X-Torq de última generación</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Arnés Balance XT para máximo confort</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div style="margin-top: 30px; display: flex; flex-direction: column; gap: 15px;">
-                                    <a href="https://wa.me/526673298505?text=Hola, me interesa la Desbrozadora Husqvarna 555RXT Robusta - $18,999 MXN" target="_blank" style="background: #25d366; color: white; padding: 15px; text-align: center; border-radius: 8px; text-decoration: none; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                                        <i class="fab fa-whatsapp"></i>
-                                        Consultar por WhatsApp
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Producto 8: Cortasetos Husqvarna 122HD60 -->
-                    <section class="product-card" id="cortasetos-122hd60" style="margin-bottom: 60px; background: white; border-radius: 12px; padding: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                        <div class="product-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
-                            <div class="product-left-column">
-                                <div class="product-image-section">
-                                    <h2 style="color: #ff6600; font-size: 2rem; margin-bottom: 20px;">Cortasetos Husqvarna 122HD60</h2>
-                                    <div class="main-image" style="text-align: center; background: #f8faff; padding: 30px; border-radius: 12px; margin-bottom: 20px;">
-                                        <img src="images/cortasetos-122hd60.jpg" alt="Cortasetos Husqvarna 122HD60" style="max-width: 100%; height: auto; max-height: 400px;">
-                                    </div>
-                                    <div style="background: linear-gradient(135deg, #253967 0%, #1e2c5a 100%); color: white; padding: 25px; border-radius: 10px; margin-bottom: 20px;">
-                                        <p style="line-height: 1.8; margin: 0;">El Cortasetos Husqvarna 122HD60 es una herramienta profesional con motor de 21.7cc de 2 tiempos y barra de corte de 60 cm con doble filo. Su mango giratorio de 90° y bajo peso de 5.1 kg lo hacen ideal para dar forma precisa a setos y arbustos con máxima comodidad.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-right-column">
-                                <div style="text-align: center; margin-bottom: 30px;">
-                                    <img src="images/husqvarna-logo-hd.png" alt="Husqvarna" style="height: 80px;">
-                                </div>
-                                <div class="product-tabs">
-                                    <div class="tabs-navigation" style="display: flex; background: #f8f9fa; border-bottom: 1px solid #ddd; border-radius: 8px 8px 0 0;">
-                                        <button class="tab-nav-btn active" data-tab="descripcion-122hd60" style="flex: 1; padding: 15px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: #253967; border-bottom: 3px solid #ff6600;">Descripción</button>
-                                        <button class="tab-nav-btn" data-tab="especificaciones-122hd60" style="flex: 1; padding: 15px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: #666;">Especificaciones</button>
-                                        <button class="tab-nav-btn" data-tab="incluye-122hd60" style="flex: 1; padding: 15px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: #666;">Qué Incluye</button>
-                                    </div>
-                                    <div class="tabs-container">
-                                        <div class="tab-content-panel active" id="descripcion-122hd60" style="padding: 30px; display: block;">
-                                            <h3 style="color: #253967; margin-bottom: 15px;">Descripción del Producto</h3>
-                                            <p style="color: #666; line-height: 1.8;">El Husqvarna 122HD60 es un cortasetos versátil diseñado para profesionales del paisajismo y propietarios exigentes. Su barra de corte de doble filo de 60 cm permite trabajar en ambas direcciones para mayor eficiencia. El mango ajustable con rotación de 90° facilita el corte de setos a diferentes alturas y ángulos, mientras que su peso ligero reduce la fatiga durante el uso prolongado.</p>
-                                        </div>
-                                        <div class="tab-content-panel" id="especificaciones-122hd60" style="padding: 30px; display: none;">
-                                            <h3 style="color: #253967; margin-bottom: 20px;">Especificaciones Técnicas</h3>
-                                            <div style="display: grid; gap: 15px;">
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Motor:</strong>
-                                                    <span style="color: #666;">21.7cc, 2 tiempos</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Longitud barra:</strong>
-                                                    <span style="color: #666;">60 cm</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Peso:</strong>
-                                                    <span style="color: #666;">5.1 kg</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Tipo de filo:</strong>
-                                                    <span style="color: #666;">Doble filo</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Precio:</strong>
-                                                    <span style="color: #666;">$5,999 MXN</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-content-panel" id="incluye-122hd60" style="padding: 30px; display: none;">
-                                            <h3 style="color: #253967; margin-bottom: 20px;">Características Destacadas</h3>
-                                            <ul style="list-style: none; padding: 0;">
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Barra de corte de doble filo</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Mango con rotación de 90°</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Peso ligero para fácil manejo</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Diseño ergonómico y balanceado</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Sistema de arranque fácil</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Protección de cuchillas incluida</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div style="margin-top: 30px; display: flex; flex-direction: column; gap: 15px;">
-                                    <a href="https://wa.me/526673298505?text=Hola, me interesa el Cortasetos Husqvarna 122HD60 - $5,999 MXN" target="_blank" style="background: #25d366; color: white; padding: 15px; text-align: center; border-radius: 8px; text-decoration: none; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                                        <i class="fab fa-whatsapp"></i>
-                                        Consultar por WhatsApp
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- Producto 9: Cortasetos Husqvarna 525HE4 Telescópico -->
-                    <section class="product-card" id="cortasetos-525he4" style="margin-bottom: 60px; background: white; border-radius: 12px; padding: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                        <div class="product-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
-                            <div class="product-left-column">
-                                <div class="product-image-section">
-                                    <h2 style="color: #ff6600; font-size: 2rem; margin-bottom: 20px;">Cortasetos Husqvarna 525HE4 Telescópico</h2>
-                                    <div class="main-image" style="text-align: center; background: #f8faff; padding: 30px; border-radius: 12px; margin-bottom: 20px;">
-                                        <img src="images/cortasetos-525he4.jpg" alt="Cortasetos Husqvarna 525HE4 Telescópico" style="max-width: 100%; height: auto; max-height: 400px;">
-                                    </div>
-                                    <div style="background: linear-gradient(135deg, #253967 0%, #1e2c5a 100%); color: white; padding: 25px; border-radius: 10px; margin-bottom: 20px;">
-                                        <p style="line-height: 1.8; margin: 0;">El Cortasetos Husqvarna 525HE4 es una herramienta telescópica profesional con motor de 25.4cc de 4 tiempos y barra de 55 cm. Con alcance de hasta 4 metros y ángulo ajustable, es ideal para cortar setos altos y áreas de difícil acceso sin necesidad de escaleras.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product-right-column">
-                                <div style="text-align: center; margin-bottom: 30px;">
-                                    <img src="images/husqvarna-logo-hd.png" alt="Husqvarna" style="height: 80px;">
-                                </div>
-                                <div class="product-tabs">
-                                    <div class="tabs-navigation" style="display: flex; background: #f8f9fa; border-bottom: 1px solid #ddd; border-radius: 8px 8px 0 0;">
-                                        <button class="tab-nav-btn active" data-tab="descripcion-525he4" style="flex: 1; padding: 15px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: #253967; border-bottom: 3px solid #ff6600;">Descripción</button>
-                                        <button class="tab-nav-btn" data-tab="especificaciones-525he4" style="flex: 1; padding: 15px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: #666;">Especificaciones</button>
-                                        <button class="tab-nav-btn" data-tab="incluye-525he4" style="flex: 1; padding: 15px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: #666;">Qué Incluye</button>
-                                    </div>
-                                    <div class="tabs-container">
-                                        <div class="tab-content-panel active" id="descripcion-525he4" style="padding: 30px; display: block;">
-                                            <h3 style="color: #253967; margin-bottom: 15px;">Descripción del Producto</h3>
-                                            <p style="color: #666; line-height: 1.8;">El Husqvarna 525HE4 es un cortasetos telescópico profesional diseñado para alcanzar setos altos y áreas difíciles sin necesidad de escaleras. Su motor de 4 tiempos de 25.4cc proporciona potencia confiable, mientras que el eje telescópico ajustable permite alcanzar hasta 4 metros de altura. El cabezal con ángulo ajustable facilita el corte de la parte superior de setos y arbustos con precisión y comodidad.</p>
-                                        </div>
-                                        <div class="tab-content-panel" id="especificaciones-525he4" style="padding: 30px; display: none;">
-                                            <h3 style="color: #253967; margin-bottom: 20px;">Especificaciones Técnicas</h3>
-                                            <div style="display: grid; gap: 15px;">
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Motor:</strong>
-                                                    <span style="color: #666;">25.4cc, 4 tiempos</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Longitud barra:</strong>
-                                                    <span style="color: #666;">55 cm</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Alcance:</strong>
-                                                    <span style="color: #666;">Hasta 4 metros</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Peso:</strong>
-                                                    <span style="color: #666;">6.8 kg</span>
-                                                </div>
-                                                <div style="display: grid; grid-template-columns: 1fr 1fr; padding: 12px; background: #f8faff; border-left: 3px solid #ff6600;">
-                                                    <strong style="color: #253967;">Precio:</strong>
-                                                    <span style="color: #666;">$11,999 MXN</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-content-panel" id="incluye-525he4" style="padding: 30px; display: none;">
-                                            <h3 style="color: #253967; margin-bottom: 20px;">Características Destacadas</h3>
-                                            <ul style="list-style: none; padding: 0;">
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Diseño telescópico extensible</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Alcance de hasta 4 metros</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Cabezal con ángulo ajustable</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Ideal para setos altos y áreas difíciles</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Motor de 4 tiempos eficiente</li>
-                                                <li style="padding: 10px 0; border-bottom: 1px solid #eee; color: #666;">✓ Diseño balanceado para mayor control</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div style="margin-top: 30px; display: flex; flex-direction: column; gap: 15px;">
-                                    <a href="https://wa.me/526673298505?text=Hola, me interesa el Cortasetos Husqvarna 525HE4 Telescópico - $11,999 MXN" target="_blank" style="background: #25d366; color: white; padding: 15px; text-align: center; border-radius: 8px; text-decoration: none; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                                        <i class="fab fa-whatsapp"></i>
-                                        Consultar por WhatsApp
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
+            <!-- Layout Estándar de Producto -->
+            <div class="standard-product-layout">
+                <!-- Título del Producto - Ancho Completo -->
+                <div class="product-title-full-width">
+                    <h1>Soplador Husqvarna 125B Naranja</h1>
                 </div>
-            </section>
-        </div>
-    </main>
 
-    <!-- Footer -->
+                <!-- Área de Contenido: Imagen + Info -->
+                <div class="product-content-area">
+                    <!-- Columna Izquierda: Solo Foto -->
+                    <div class="product-left-column">
+                        <!-- Fotos del Producto -->
+                        <div class="product-photo">
+                            <!-- Galería de Producto con Zoom -->
+                            <div class="product-gallery">
+                                <div class="main-image">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Soplador 125B Naranja Principal" class="product-image active" id="125bnaranja-image1">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Soplador 125B Naranja Motor" class="product-image" id="125bnaranja-image2">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Soplador 125B Naranja Sistema" class="product-image" id="125bnaranja-image3">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Soplador 125B Naranja Detalles" class="product-image" id="125bnaranja-image4">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Soplador 125B Naranja Accesorios" class="product-image" id="125bnaranja-image5">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Soplador 125B Naranja Manual" class="product-image" id="125bnaranja-image6">
+                                </div>
+                                <div class="image-thumbnails">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Principal" class="thumbnail active" data-target="125bnaranja-image1">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Motor" class="thumbnail" data-target="125bnaranja-image2">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Sistema" class="thumbnail" data-target="125bnaranja-image3">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Detalles" class="thumbnail" data-target="125bnaranja-image4">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Accesorios" class="thumbnail" data-target="125bnaranja-image5">
+                                    <img src="images/husqvarna-logo-hd.png" alt="Manual" class="thumbnail" data-target="125bnaranja-image6">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tabs de Información debajo de la foto -->
+                        <div class="product-tabs">
+                            <div class="tabs-navigation">
+                                <button class="tab-nav-btn active" data-tab="descripcion-125bnaranja">Descripción</button>
+                                <button class="tab-nav-btn" data-tab="especificaciones-125bnaranja">Especificaciones</button>
+                                <button class="tab-nav-btn" data-tab="incluye-125bnaranja">Qué Incluye</button>
+                            </div>
+
+                            <div class="tabs-container">
+                                <!-- Tab: Descripción -->
+                                <div class="tab-content-panel active" id="descripcion-125bnaranja">
+                                    <div class="description-section">
+                                        <h3>Descripción del Producto</h3>
+                                        <p>Soplador manual ligero color naranja con motor 28cc de 2 tiempos, velocidad 170 mph, peso 4.3 kg, uso doméstico. Perfecto para mantener limpios patios y jardines pequeños con facilidad.</p>
+
+                                        <h4>Características Principales</h4>
+                                        <ul>
+                                            <li>Motor de 28cc de 2 tiempos</li>
+                                            <li>Velocidad de aire de 170 mph</li>
+                                            <li>Peso ligero de 4.3 kg</li>
+                                            <li>Tipo manual portátil</li>
+                                            <li>Diseño ergonómico color naranja</li>
+                                            <li>Ideal para uso doméstico</li>
+                                            <li>Bajo consumo de combustible</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Tab: Especificaciones -->
+                                <div class="tab-content-panel" id="especificaciones-125bnaranja">
+                                    <h3>Especificaciones Técnicas</h3>
+                                    <div class="specs-grid">
+                                        <div class="spec-item">
+                                            <h4>Motor</h4>
+                                            <p>28cc 2 tiempos</p>
+                                        </div>
+                                        <div class="spec-item">
+                                            <h4>Velocidad</h4>
+                                            <p>170 mph</p>
+                                        </div>
+                                        <div class="spec-item">
+                                            <h4>Peso</h4>
+                                            <p>4.3 kg</p>
+                                        </div>
+                                        <div class="spec-item">
+                                            <h4>Tipo</h4>
+                                            <p>Manual portátil</p>
+                                        </div>
+                                        <div class="spec-item">
+                                            <h4>Uso</h4>
+                                            <p>Doméstico</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tab: Qué Incluye -->
+                                <div class="tab-content-panel" id="incluye-125bnaranja">
+                                    <h3>Qué Incluye</h3>
+                                    <ul class="includes-list">
+                                        <li>Soplador Husqvarna 125B Naranja completo</li>
+                                        <li>Tubo de soplado</li>
+                                        <li>Manual de usuario en español</li>
+                                        <li>Certificado de garantía</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna Derecha: Logo + Precio + Botones -->
+                    <div class="product-right-column">
+                        <!-- Logo de Husqvarna MÁS GRANDE (500px height box) -->
+                        <div class="husqvarna-logo-sidebar">
+                            <img src="images/husqvarna-logo-hd.png" alt="Husqvarna" class="husqvarna-logo-xl">
+                        </div>
+
+                        <!-- Precio del Producto -->
+                        <div class="product-price-box">
+                            <p class="price-text">Precio de Venta:</p>
+                            <div class="price-display">
+                                <span class="price-amount">$3,799</span>
+                                <span class="price-currency">MXN</span>
+                            </div>
+                            <p class="price-note">*Precio sujeto a cambios sin previo aviso</p>
+                        </div>
+
+                        <!-- Botón de Compra Coppel -->
+                        <div class="purchase-button">
+                            <div onclick="window.open('https://www.coppel.com', '_blank')"
+                                 style="display: flex !important; align-items: center !important; justify-content: center !important; width: 100% !important; padding: 20px 30px !important; background-color: #05298E !important; border-radius: 10px !important; cursor: pointer !important; min-height: 75px !important; color: #FFFFFF !important; font-family: 'Sharp Sans No 2', sans-serif !important; font-weight: bold !important; transition: all 0.3s ease !important; box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1) !important;">
+                                <div style="color: #FFFFFF !important; position: relative !important;">
+                                    <div style="color: #FFFFFF !important; font-size: 1.125rem !important; text-align: left !important; margin-bottom: 8px !important; font-family: 'Sharp Sans No 2', sans-serif !important; font-weight: bold !important;">De venta en</div>
+                                    <div style="color: #FFFFFF !important; display: flex !important; align-items: center !important; justify-content: flex-start !important; position: relative !important;">
+                                        <div style="display: inline-flex !important; gap: 4px !important; align-items: center !important; margin-right: 12px !important;">
+                                            <div style="width: 22px !important; height: 22px !important; background: #F0D224 !important; border-radius: 50% !important; border: none !important;"></div>
+                                            <div style="width: 16px !important; height: 16px !important; background: #F0D224 !important; border-radius: 50% !important; border: none !important;"></div>
+                                            <div style="width: 16px !important; height: 16px !important; background: #F0D224 !important; border-radius: 50% !important; border: none !important;"></div>
+                                        </div>
+                                        <span style="color: #FFFFFF !important; font-weight: bold !important; font-size: 2.25rem !important; font-family: 'Sharp Sans No 2', sans-serif !important; margin-left: 6px !important;">Coppel</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Botón WhatsApp -->
+                        <div class="whatsapp-button">
+                            <div onclick="window.open('https://wa.me/526673298505?text=Hola, me interesa el Soplador Husqvarna 125B Naranja - $3,799 MXN. Necesito información y/o cotización para venta directa. ¿Podrían ayudarme?', '_blank')"
+                                 style="display: flex !important; align-items: center !important; justify-content: center !important; width: 100% !important; padding: 20px 30px !important; background-color: #25D366 !important; border-radius: 10px !important; cursor: pointer !important; min-height: 75px !important; color: #FFFFFF !important; font-family: 'Sharp Sans No 2', sans-serif !important; font-weight: bold !important; transition: all 0.3s ease !important; box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1) !important; margin-top: 16px !important;">
+                                <div style="display: flex !important; align-items: center !important; gap: 12px !important; color: #FFFFFF !important;">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink: 0 !important;">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516"/>
+                                    </svg>
+                                    <div style="color: #FFFFFF !important; position: relative !important;">
+                                        <div style="color: #FFFFFF !important; font-size: 1.125rem !important; text-align: left !important; margin-bottom: 8px !important; font-family: 'Sharp Sans No 2', sans-serif !important; font-weight: bold !important;">Información y/o venta directa</div>
+                                        <div style="color: #FFFFFF !important; display: flex !important; align-items: center !important; justify-content: flex-start !important; position: relative !important;">
+                                            <span style="color: #FFFFFF !important; font-weight: bold !important; font-size: 2.25rem !important; font-family: 'Sharp Sans No 2', sans-serif !important;">WhatsApp</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Cierre de standard-product-layout -->
+        </div> <!-- Cierre de container -->
+    </section>
+
+    <!-- Producto 5: Desbrozadora Husqvarna 545F -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="lyd-footer-logo">
-                        <img src="https://i.ibb.co/p60cXvdb/Captura-de-pantalla-2025-09-16-a-la-s-6-41-38-p-m.png" alt="LYD - Logística y Distribución Nacional" class="lyd-official-logo">
+                        <img src="https://i.ibb.co/p60cXvdb/Captura-de-pantalla-2025-09-16-a-la-s-6-41-38-p-m.png" alt="LYD - Logística y Distribución Nacional" class="lyd-official-footer-logo">
                     </div>
                     <p>Distribución nacional de maquinaria agrícola y equipos profesionales Husqvarna. Calidad y confianza garantizada.</p>
                     <div class="social-links">
@@ -1774,19 +2220,19 @@ a:hover {
                         <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>Productos</h3>
                     <ul>
                         <li><a href="motocultivadores.html">Motocultivadores</a></li>
                         <li><a href="motosierras.html">Motosierras</a></li>
                         <li><a href="podadoras.html">Podadoras</a></li>
-                        <li><a href="#sopladoras">Sopladoras</a></li>
+                        <li><a href="sopladoras.html">Sopladoras</a></li>
                         <li><a href="#fumigadoras">Fumigadoras</a></li>
                         <li><a href="#generadores">Generadores</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>Empresa</h3>
                     <ul>
@@ -1796,7 +2242,7 @@ a:hover {
                         <li><a href="#soporte">Soporte Técnico</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h3>Contacto</h3>
                     <div class="contact-info">
@@ -1815,7 +2261,7 @@ a:hover {
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
                     <p>&copy; 2024 LYD - Logística y Distribución Nacional. Todos los derechos reservados.</p>
@@ -1832,6 +2278,30 @@ a:hover {
     <script>
 // Embedded JavaScript for sopladoras.html
 
+// Image Gallery Handler
+function initializeImageGallery() {
+    const thumbnails = document.querySelectorAll('.thumbnail');
+
+    thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-target');
+            const gallery = this.closest('.product-gallery');
+
+            // Remove active from all images and thumbnails in this gallery
+            gallery.querySelectorAll('.product-image').forEach(img => {
+                img.classList.remove('active');
+            });
+            gallery.querySelectorAll('.thumbnail').forEach(thumb => {
+                thumb.classList.remove('active');
+            });
+
+            // Add active to clicked thumbnail and target image
+            this.classList.add('active');
+            document.getElementById(targetId).classList.add('active');
+        });
+    });
+}
+
 // Initialize product tabs
 function initializeProductTabs() {
     const tabButtons = document.querySelectorAll('.tab-nav-btn');
@@ -1844,26 +2314,20 @@ function initializeProductTabs() {
             // Remove active from all buttons in this product
             tabsContainer.querySelectorAll('.tab-nav-btn').forEach(btn => {
                 btn.classList.remove('active');
-                btn.style.color = '#666';
-                btn.style.borderBottom = 'none';
             });
 
             // Add active to clicked button
             this.classList.add('active');
-            this.style.color = '#253967';
-            this.style.borderBottom = '3px solid #ff6600';
 
             // Hide all panels in this product
             tabsContainer.querySelectorAll('.tab-content-panel').forEach(panel => {
                 panel.classList.remove('active');
-                panel.style.display = 'none';
             });
 
             // Show target panel
             const targetPanel = document.getElementById(targetTab);
             if (targetPanel) {
                 targetPanel.classList.add('active');
-                targetPanel.style.display = 'block';
             }
         });
     });
@@ -1871,7 +2335,8 @@ function initializeProductTabs() {
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🌱 LYD - Sopladoras y Desbrozadoras Husqvarna loaded');
+    console.log('Sopladoras y Desbrozadoras Husqvarna loaded');
+    initializeImageGallery();
     initializeProductTabs();
 
     // Dropdown toggle on click
